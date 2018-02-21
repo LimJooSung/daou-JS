@@ -23,5 +23,10 @@ public class LoginController {
     String login(){
         return "/login/form";
     }
+    
+    @GetMapping("/loginProc.do")
+    String loginProc(){
+        return "/sales/sales_performanceAdmin_month";
+    }
 
 }
