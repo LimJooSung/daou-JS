@@ -1,0 +1,14 @@
+# 18.01.23 leesh04
+#
+# OracleDriver는 Maven 저장소가 없으며, SpringBoot 기반의 WebApplication 배포시 WEB-INF/lib에 포함시키기 위해서는 local 저장소에 설치해야 한다.
+#
+# > cd sales-integration-parent/libs
+# > mvn install:install-file -Dfile=ojdbc14.jar -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -DgeneratePom=true
+#
+# ex) d:\apache-maven-3.3.9\bin\mvn install:install-file -Dfile=ojdbc14.jar -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -DgeneratePom=true
+# <dependency>
+#   <groupId>com.oracle</groupId>
+#   <artifactId>ojdbc14</artifactId>
+#   <version>10.2.0.4.0</version>
+# </dependency>
+

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: user
+Build-Jdk: 9.0.4
+Implementation-Title: sales-integration-commons
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: com.ppurio.biz
+Implementation-Vendor: DAOU Tech., Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ starter-parent/sales-integration-parent/sales-integration-commons/
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <name>sales-integration-commons</name>
+    <description>Sales Integration Commons</description>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ppurio.biz</groupId>
+    <artifactId>sales-integration-commons</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+    <parent>
+        <groupId>com.ppurio.biz</groupId>
+        <artifactId>sales-integration-parent</artifactId>
+        <version>0.0.1</version>
+    </parent>    
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <!--
+            18.01.26 by leesh04 - resource filterling
+            1. sales-integration-commons에서는 @..@만 사용 함
+            2. maven-resources-plugin은 ${..}, @..@ 모두 적용 됨.
+            3. maven-resources-plugin 사용시 sales-integration-parent를 제거해야 함.
+              (spring-boot-stater-parent 때문에 정상 동작이 안됨)
+        -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>
