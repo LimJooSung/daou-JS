@@ -6,7 +6,7 @@
 <@page.base pageTitle>
 
 <!-- sidebar -->
-<div class="sidebar">
+<!-- <div class="sidebar">
 	<ul class="nav">
 		<li class="menu"><a href="#">실적관리<i></i></a>
 			<ul class="nav_second">
@@ -16,7 +16,7 @@
 		</li>
 		<li class="menu"><a href="#">담보관리</a></li>
 	</ul>
-</div> 
+</div>  -->
 <!-- //sidebar -->
 
 <!-- contents -->

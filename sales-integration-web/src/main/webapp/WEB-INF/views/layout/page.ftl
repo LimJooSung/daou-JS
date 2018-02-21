@@ -49,17 +49,17 @@
 						<li><a href="${rc.contextPath}/salesPerformanceAdminMonth.do">실적관리</a></li>
 						<li><a href="${rc.contextPath}/salesPawn.do">담보관리</a></li>
 					</ul></li>
-				<li><a href="#">고객관리</a>
+				<li><a href="${rc.contextPath}/customerMemberList.do">고객관리</a>
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">회원리스트</a></li>
-						<li><a href="#">승인 전 회원 리스트</a></li>
-						<li><a href="#">해지고객 리스트</a></li>
-						<li><a href="#">여신 관리</a></li>
+						<li><a href="${rc.contextPath}/customerMemberList.do">회원리스트</a></li>
+						<li><a href="${rc.contextPath}/customerBeforeList.do">승인 전 회원 리스트</a></li>
+						<li><a href="${rc.contextPath}/customerOutmemberList.do">해지고객 리스트</a></li>
+						<li><a href="${rc.contextPath}/customerCreditManagement.do">여신 관리</a></li>
 						<li><a href="#">발신번호 관리</a></li>
 						<li><a href="#">카카오톡 비즈메시지</a></li>
-						<li><a href="#">수동 입출금</a></li>
-						<li><a href="#">매입처 관리</a></li>
+						<li><a href="${rc.contextPath}/customerManualDeposit.do">수동 입출금</a></li>
+						<li><a href="${rc.contextPath}/customerBuyeradmin.do">매입처 관리</a></li>
 					</ul></li>
 				<li><a href="#">정산관리</a>
 					<ul class="sub">
