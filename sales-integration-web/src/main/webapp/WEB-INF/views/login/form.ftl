@@ -8,7 +8,7 @@
     <h1><img src="images/login_logo.png" alt="" /><span>비즈메세징 영업관리시스템</span></h1>
     <div class="login_box">
         <div class="form">
-            <form class="login_form" action="/loginProc.do" method="get">
+            <form class="login_form" action="/loginProc.do" method="post">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 <p><label for="id" class="id_b">사번</label>
                     <input type="text" id="empno" name="empno" class="pw_b" placeholder="사번"/></p>
