@@ -1,5 +1,4 @@
-<#macro sidebar>
-<!-- sidebar -->
+<!-- sales sidebar -->
 <div class="sidebar">
 	<ul class="nav">
 		<li class="menu"><a href="#">실적관리<i></i></a>
@@ -8,8 +7,7 @@
 				<li><a href="${rc.contextPath}/salesReferenceRoom.do">실적 자료실</a></li>
 			</ul>
 		</li>
-		<li class="menu"><a href="#">담보관리</a></li>
+		<li class="menu"><a href="${rc.contextPath}/salesPawn.do">담보관리</a></li>
 	</ul>
 </div> 
 <!-- //sidebar -->
-</#macro>

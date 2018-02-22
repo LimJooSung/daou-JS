@@ -5,32 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">회원리스트</a></li>
-		<li class="menu"><a href="#">승인 전 회원리스트</a></li>
-		<li class="menu"><a href="#">해지고객 리스트</a></li>
-		<li class="menu"><a href="#">여신 관리</a></li>
-		<li class="menu"><a href="#">발신번호 관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신번호 조회</a></li>
-				<li><a href="#">발신번호 승인</a></li>
-				<li><a href="#">발신번호 담당자</a></li>
-				<li><a href="#">예외사업자 관리</a></li>
-				<li><a href="#">FAX 차단 통계</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신프로필 관리</a></li>
-				<li><a href="#">템플릿/이미지 관리</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">수동 입출금</a></li>
-		<li class="menu"><a href="#">매입처 관리</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -69,8 +44,9 @@
 				<option value="3">2</option>
 				<option value="4">3</option>
 				<option value="5">4</option>
-			</select> <input id="input1" type="text" placeholder="검색 내용 입력"
-				class="w200 mr_1"> <a href="#" class="btn_sm_sch_black r3">검색</a>
+			</select> 
+			<input id="input1" type="text" placeholder="검색 내용 입력" class="w200 mr_1"> 
+			<a href="#" class="btn_sm_sch_black r3">검색</a>
 		</p>
 	</div>
 	<!-- //search -->
@@ -106,11 +82,10 @@
 	<div class="box_b3">
 		<div class="form_group p100">
 			<p class="align_c mb_15">
-				<label for="normalRadios" class="mr_15"><input
-					name="normalRadios" id="normalRadios" type="radio" checked=""
-					value="option1"> 일반여신</label> <label for="spacialRadios"
-					class="mr_15"><input name="spacialRadios2"
-					id="spacialRadios" type="radio" value="option2"> 특별여신</label>
+				<label for="normalRadios" class="mr_15">
+					<input name="normalRadios" id="normalRadios" type="radio" checked="" value="option1"> 일반여신</label> 
+				<label for="spacialRadios" class="mr_15">
+					<input name="spacialRadios2" id="spacialRadios" type="radio" value="option2"> 특별여신</label>
 			</p>
 
 			<!-- 일반 여신 선택 시 -->
@@ -163,11 +138,14 @@
 							<p>
 								<select class="w80">
 									<option value="">2017</option>
-								</select> 년 <select class="w60">
+								</select> 년 
+								<select class="w60">
 									<option value="">00</option>
-								</select> 월 ~ <select class="w80">
+								</select> 월 ~ 
+								<select class="w80">
 									<option value="">2017</option>
-								</select> 년 <select class="w60">
+								</select> 년 
+								<select class="w60">
 									<option value="">00</option>
 								</select> 월
 							</p>
@@ -183,16 +161,12 @@
 
 	<!-- 하단 버튼 -->
 	<div class="btn_area mb_15">
-		<a href="#" class="btn lg btn_blue">확인</a> <a href="#"
-			class="btn lg btn_gray">취소</a>
+		<a href="#" class="btn lg btn_blue">확인</a> 
+		<a href="#" class="btn lg btn_gray">취소</a>
 	</div>
 	<!-- //하단 버튼 -->
 </div>
 <!-- //contents -->
-
-
-
-
 
 </@page.base>
 

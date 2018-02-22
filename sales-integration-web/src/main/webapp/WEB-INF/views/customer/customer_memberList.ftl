@@ -5,32 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">회원리스트</a></li>
-		<li class="menu"><a href="#">승인 전 회원리스트</a></li>
-		<li class="menu"><a href="#">해지고객 리스트</a></li>
-		<li class="menu"><a href="#">여신 관리</a></li>
-		<li class="menu"><a href="#">발신번호 관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신번호 조회</a></li>
-				<li><a href="#">발신번호 승인</a></li>
-				<li><a href="#">발신번호 담당자</a></li>
-				<li><a href="#">예외사업자 관리</a></li>
-				<li><a href="#">FAX 차단 통계</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신프로필 관리</a></li>
-				<li><a href="#">템플릿/이미지 관리</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">수동 입출금</a></li>
-		<li class="menu"><a href="#">매입처 관리</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -63,260 +38,264 @@
 				<option value="3">2</option>
 				<option value="4">3</option>
 				<option value="5">4</option>
-			</select> <input id="input1" type="text" placeholder="ID" class="mr_15">
-			<label for="input1" class="bul">계정</label> <label><input
-				name="optionsRadios1" id="optionsRadios1" type="radio" checked=""
-				value="option1"> 마스터</label> <label class="mr_15"><input
-				name="optionsRadios2" id="optionsRadios2" type="radio"
-				value="option2"> 슬레이브</label> <label for="input1" class="bul">서비스</label>
-			<label><input name="optionsRadios3" id="optionsRadios3"
-				type="radio" checked="" value="option3"> 비즈뿌리오</label> <label
-				class="mr_15"><input name="optionsRadios4"
-				id="optionsRadios4" type="radio" value="option4"> 유핏</label> <a
-				href="#" class="btn_sm_sch_black r3">검색</a>
+			</select> 
+			<input id="input1" type="text" placeholder="ID" class="mr_15">
+			<label for="input1" class="bul">계정</label> 
+			<label><input name="optionsRadios1" id="optionsRadios1" type="radio" checked="" value="option1"> 마스터</label> 
+			<label class="mr_15"><input name="optionsRadios2" id="optionsRadios2" type="radio" value="option2"> 슬레이브</label> 
+			<label for="input1" class="bul">서비스</label>
+			<label><input name="optionsRadios3" id="optionsRadios3" type="radio" checked="" value="option3"> 비즈뿌리오</label> 
+			<label class="mr_15"><input name="optionsRadios4" id="optionsRadios4" type="radio" value="option4"> 유핏</label> 
+			<a href="#" class="btn_sm_sch_black r3">검색</a>
 		</p>
 	</div>
 	<!-- //검색 -->
 
 	<div class="scroll h500">
-		<!-- 검색 결과 table -->
-		<table class="tb_list_b">
-			<colgroup>
-				<col style="width: 8.3%">
-				<col style="width: 7.3%">
-				<col style="width: 7.3%">
-				<col style="width: 7.3%">
-				<col style="width: 9.3%">
-				<col style="width: 9.3%">
-				<col style="width: 9.3%">
-				<col style="width: 9.3%">
-				<col style="width: 9.3%">
-				<col style="width: 9.3%">
-				<col style="width: 6.3%">
-				<col style="width: 7.3%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th>승인일 <a href="" class="btn_vsm mr_3"><span
-							class="ico_up">오름차순</span></a><a href="" class="btn_vsm"><span
-							class="ico_down">내림차순</span></a></th>
-					<th>ID</th>
-					<th>서비스</th>
-					<th>업체명</th>
-					<th>회원타입<br /> <select id="select1" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+	<!-- 검색 결과 table -->
+	<table class="tb_list_b">
+		<colgroup>
+			<col style="width: 8.3%">
+			<col style="width: 7.3%">
+			<col style="width: 7.3%">
+			<col style="width: 7.3%">
+			<col style="width: 9.3%">
+			<col style="width: 9.3%">
+			<col style="width: 9.3%">
+			<col style="width: 9.3%">
+			<col style="width: 9.3%">
+			<col style="width: 9.3%">
+			<col style="width: 6.3%">
+			<col style="width: 7.3%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>승인일 
+					<a href="" class="btn_vsm mr_3"><span class="ico_up">오름차순</span></a>
+					<a href="" class="btn_vsm"><span class="ico_down">내림차순</span></a></th>
+				<th>ID</th>
+				<th>서비스</th>
+				<th>업체명</th>
+				<th>회원타입<br /> 
+					<select id="select1" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>결제<br /> <select id="select2" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+				</th>
+				<th>결제<br /> 
+					<select id="select2" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>발송 상태<br /> <select id="select3" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+				</th>
+				<th>발송 상태<br /> 
+					<select id="select3" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>담당부서<br /> <select id="select4" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+				</th>
+				<th>담당부서<br /> 
+					<select id="select4" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>담당자<br /> <select id="select5" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+				</th>
+				<th>담당자<br /> 
+					<select id="select5" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>관리자 계정<br /> <select id="select6" class="w60">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
+				</th>
+				<th>관리자 계정<br /> 
+					<select id="select6" class="w60">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
-					</th>
-					<th>발송량</th>
-					<th>회원정보</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓢdaoutest</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdaou</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td>무</td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdodo</td>
-					<td>비즈뿌리오</td>
-					<td>도도</td>
-					<td>재판매(에이전트)_고객사</td>
-					<td>후불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>growin</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdodo</td>
-					<td>비즈뿌리오</td>
-					<td>도도</td>
-					<td>재판매(에이전트)_고객사</td>
-					<td>후불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdaou</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td>무</td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓢdaoutest</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdaou</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td>무</td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdodo</td>
-					<td>비즈뿌리오</td>
-					<td>도도</td>
-					<td>재판매(에이전트)_고객사</td>
-					<td>후불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>growin</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdodo</td>
-					<td>비즈뿌리오</td>
-					<td>도도</td>
-					<td>재판매(에이전트)_고객사</td>
-					<td>후불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td><a href="" class="a_be blue">유</a></td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-				<tr>
-					<td>2017.09.12</td>
-					<td>ⓜdaou</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>직판(일반)</td>
-					<td>선불</td>
-					<td>발송 가능</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>-</td>
-					<td>무</td>
-					<td><a href="#" class="btn sm btn_skyBlue">수정</a></td>
-				</tr>
-			</tbody>
-		</table>
-		<!-- 검색 결과 table -->
+				</th>
+				<th>발송량</th>
+				<th>회원정보</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓢdaoutest</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdaou</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td>무</td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdodo</td>
+				<td>비즈뿌리오</td>
+				<td>도도</td>
+				<td>재판매(에이전트)_고객사</td>
+				<td>후불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>growin</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdodo</td>
+				<td>비즈뿌리오</td>
+				<td>도도</td>
+				<td>재판매(에이전트)_고객사</td>
+				<td>후불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdaou</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td>무</td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓢdaoutest</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdaou</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td>무</td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdodo</td>
+				<td>비즈뿌리오</td>
+				<td>도도</td>
+				<td>재판매(에이전트)_고객사</td>
+				<td>후불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>growin</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdodo</td>
+				<td>비즈뿌리오</td>
+				<td>도도</td>
+				<td>재판매(에이전트)_고객사</td>
+				<td>후불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td><a href="" class="a_be blue">유</a></td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+			<tr>
+				<td>2017.09.12</td>
+				<td>ⓜdaou</td>
+				<td>비즈뿌리오</td>
+				<td>다우기술</td>
+				<td>직판(일반)</td>
+				<td>선불</td>
+				<td>발송 가능</td>
+				<td>MSG2</td>
+				<td>윤수지</td>
+				<td>-</td>
+				<td>무</td>
+				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- 검색 결과 table -->
 	</div>
 
 	<!-- paging -->
@@ -324,17 +303,11 @@
 		<span>
 			<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button>
-		</span> <span class="page"> <span class="here">1</span>
-		<button type="button">2</button>
-			<button type="button">3</button>
-			<button type="button">4</button>
-			<button type="button">5</button>
-			<button type="button">6</button>
-			<button type="button">7</button>
-			<button type="button">8</button>
-			<button type="button">9</button>
-			<button type="button">10</button>
-		</span> <span>
+		</span> 
+		<span class="page"> 
+			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button>
+		</span> 
+		<span>
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
 			<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
 		</span>
@@ -390,10 +363,6 @@
 	<!-- //layer popup -->
 </div>
 <!-- //contents -->
-
-
-
-
 
 </@page.base>
 

@@ -19,28 +19,40 @@ public class StatisticsController {
     
     private static final Logger logs = LoggerFactory.getLogger(StatisticsController.class);
     
+    /**
+     * 계정별 발송 통계
+     * @return
+     */
     @GetMapping("/statisticsAccountStatistics.do")
     String statisticsAccountStatistics(){
         return "/statistics/statistics_accountStatistics";
     }
     
+    /**
+     * 라인별 발송 통계
+     * @return
+     */
     @GetMapping("/statisticsLineStatistics.do")
     String statisticsLineStatistics(){
         return "/statistics/statistics_lineStatistics";
     }
     
+    /**
+     * 발송 내역 조회
+     * @return
+     */
     @GetMapping("/statisticsSendlistSearch.do")
     String statisticsSendlistSearch(){
         return "/statistics/statistics_sendlistSearch";
     }
     
+    /**
+     * 발송 추이
+     * @return
+     */
     @GetMapping("/statisticsSendWatch.do")
     String statisticsSendWatch(){
         return "/statistics/statistics_sendWatch";
     }
-//    @GetMapping("/salesPawn.do")
-//    String salesPawn(){
-//        return "/statistics/sales_pawn";
-//    }
 
 }

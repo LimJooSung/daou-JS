@@ -5,32 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">회원리스트</a></li>
-		<li class="menu"><a href="#">승인 전 회원리스트</a></li>
-		<li class="menu"><a href="#">해지고객 리스트</a></li>
-		<li class="menu"><a href="#">여신 관리</a></li>
-		<li class="menu"><a href="#">발신번호 관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신번호 조회</a></li>
-				<li><a href="#">발신번호 승인</a></li>
-				<li><a href="#">발신번호 담당자</a></li>
-				<li><a href="#">예외사업자 관리</a></li>
-				<li><a href="#">FAX 차단 통계</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신프로필 관리</a></li>
-				<li><a href="#">템플릿/이미지 관리</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">수동 입출금</a></li>
-		<li class="menu"><a href="#">매입처 관리</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -38,7 +13,9 @@
 		<em></em>
 		<h2>승인 전 회원 리스트</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > <a href="">고객 관리</a> > <a href="">승인 전 회원 리스트</a>
+			<a href="">홈</a> > 
+			<a href="">고객 관리</a> > 
+			<a href="">승인 전 회원 리스트</a>
 		</blockquote>
 	</div>
 	<!-- //title -->
@@ -58,12 +35,12 @@
 		<p class="align_c">
 			<select class="w100">
 				<option>ID</option>
-			</select> <input id="input1" type="text" placeholder="검색 내용 입력" class="mr_15">
-			<label class="bul">서비스</label> <label for="bizRadios"><input
-				name="bizRadios" id="bizRadios" type="radio" checked=""
-				value="option1"> 비즈뿌리오</label> <label for="ufitRadios" class="mr_15"><input
-				name="ufitRadios" id="ufitRadios" type="radio" value="option2">
-				유핏</label> <a href="#" class="btn_sm_sch_black r3">검색</a>
+			</select> 
+			<input id="input1" type="text" placeholder="검색 내용 입력" class="mr_15">
+			<label class="bul">서비스</label> 
+			<label for="bizRadios"><input name="bizRadios" id="bizRadios" type="radio" checked="" value="option1"> 비즈뿌리오</label> 
+			<label for="ufitRadios" class="mr_15"><input name="ufitRadios" id="ufitRadios" type="radio" value="option2"> 유핏</label> 
+			<a href="#" class="btn_sm_sch_black r3">검색</a>
 		</p>
 	</div>
 	<!-- //ID/서비스 검색 -->
@@ -83,9 +60,9 @@
 			<thead>
 				<tr>
 					<th>No.</th>
-					<th>가입일 <a href="" class="btn_vsm mr_3"><span
-							class="ico_up">오름차순</span></a><a href="" class="btn_vsm"><span
-							class="ico_down">내림차순</span></a></th>
+					<th>가입일 
+						<a href="" class="btn_vsm mr_3"><span class="ico_up">오름차순</span></a>
+						<a href="" class="btn_vsm"><span class="ico_down">내림차순</span></a></th>
 					<th>서비스</th>
 					<th>업체명/이름</th>
 					<th>ID</th>
@@ -284,9 +261,6 @@
 	<!-- //paging -->
 </div>
 <!-- //contents -->
-
-
-
 
 </@page.base>
 

@@ -5,17 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">계정별 발송통계</a></li>
-		<li class="menu"><a href="#">라인별 발송현황</a></li>
-		<li class="menu"><a href="#">발송 추이</a></li>
-		<li class="menu"><a href="#">발송 내역 조회</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/statistics-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -1203,9 +1193,6 @@
 	<!-- //tab_증감 TOP 10 업체 -->
 </div>
 <!-- //contents -->
-
-
-
 
 </@page.base>
 

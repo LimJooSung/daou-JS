@@ -1,27 +1,11 @@
 <#import "/layout/page.ftl" as page>
-<#import "/layout/sales_sidebar.ftl" as sidebar>
 
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 실적자료실' />
 
 <@page.base pageTitle>
 
-<@sidebar />
-
-<!-- sidebar -->
-<!-- <div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">실적관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="${rc.contextPath}/salesPerformanceAdminTeam.do">실적 조회</a></li>
-				<li><a href="${rc.contextPath}/salesReferenceRoom.do">실적 자료실</a></li>
-			</ul>
-		</li>
-		<li class="menu"><a href="#">담보관리</a></li>
-	</ul>
-</div>  -->
-<!-- //sidebar -->
-
+<#include '/include/sales-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -251,8 +235,6 @@
 	</table>
 	<!-- //담보관리 table -->
 </div>
-
-
 
 </@page.base>
 

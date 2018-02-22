@@ -19,11 +19,19 @@ public class LoginController {
     
     private static final Logger logs = LoggerFactory.getLogger(LoginController.class);
     
+    /**
+     * 로그인 페이지로 이동
+     * @return
+     */
     @GetMapping("/login.do")
     String login(){
         return "/login/form";
     }
     
+    /**
+     * 로그인 절차 (추후 post 방식으로 수정 예정)
+     * @return
+     */
     @GetMapping("/loginProc.do")
     String loginProc(){
         return "/sales/sales_performanceAdmin_month";

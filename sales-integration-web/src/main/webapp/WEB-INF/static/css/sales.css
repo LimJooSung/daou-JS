@@ -753,3 +753,23 @@ a.a_be:visited{text-decoration:underline;}
 .ul_atten li {line-height:21px;}
 
 
+/* 레이어 팝업 css */
+.setDiv {
+    padding-top: 100px;
+    text-align: center;
+}
+.mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9999;
+    background-color:#000;
+    display:none;
+}
+.window {
+    display: none;
+    background-color: #ffffff;
+    height: 550px;
+    width: 1100px;
+    z-index:99999;
+}

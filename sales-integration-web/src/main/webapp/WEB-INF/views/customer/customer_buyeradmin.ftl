@@ -5,32 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">회원리스트</a></li>
-		<li class="menu"><a href="#">승인 전 회원리스트</a></li>
-		<li class="menu"><a href="#">해지고객 리스트</a></li>
-		<li class="menu"><a href="#">여신 관리</a></li>
-		<li class="menu"><a href="#">발신번호 관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신번호 조회</a></li>
-				<li><a href="#">발신번호 승인</a></li>
-				<li><a href="#">발신번호 담당자</a></li>
-				<li><a href="#">예외사업자 관리</a></li>
-				<li><a href="#">FAX 차단 통계</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신프로필 관리</a></li>
-				<li><a href="#">템플릿/이미지 관리</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">수동 입출금</a></li>
-		<li class="menu"><a href="#">매입처 관리</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -66,8 +41,8 @@
 
 	<!-- button -->
 	<div class="mt_15 align_r">
-		<a href="#" class="btn_md_skyBlue">수정</a> <a href=""
-			class="btn_md_gray">삭제</a>
+		<a href="#" class="btn_md_skyBlue">수정</a> 
+		<a href="" class="btn_md_gray">삭제</a>
 	</div>
 	<!-- //button -->
 
@@ -106,11 +81,12 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<th>품목 <select id="itemSelect" class="w150">
+					<th>품목 
+						<select id="itemSelect" class="w150">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
-					</select>
+						</select>
 					</th>
 					<th>기본료</th>
 					<th>구간</th>
@@ -184,10 +160,6 @@
 
 </div>
 <!-- //contents -->
-
-
-
-
 
 </@page.base>
 

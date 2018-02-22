@@ -5,32 +5,7 @@
 
 <@page.base pageTitle>
 
-<!-- sidebar -->
-<div class="sidebar">
-	<ul class="nav">
-		<li class="menu"><a href="#">회원리스트</a></li>
-		<li class="menu"><a href="#">승인 전 회원리스트</a></li>
-		<li class="menu"><a href="#">해지고객 리스트</a></li>
-		<li class="menu"><a href="#">여신 관리</a></li>
-		<li class="menu"><a href="#">발신번호 관리<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신번호 조회</a></li>
-				<li><a href="#">발신번호 승인</a></li>
-				<li><a href="#">발신번호 담당자</a></li>
-				<li><a href="#">예외사업자 관리</a></li>
-				<li><a href="#">FAX 차단 통계</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
-			<ul class="nav_second">
-				<li><a href="#">발신프로필 관리</a></li>
-				<li><a href="#">템플릿/이미지 관리</a></li>
-			</ul></li>
-		<li class="menu"><a href="#">수동 입출금</a></li>
-		<li class="menu"><a href="#">매입처 관리</a></li>
-	</ul>
-</div>
-<!-- //sidebar -->
-
+<#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -58,8 +33,9 @@
 				<th><b class="txt_c_red">*</b> 매입처명</th>
 				<td><input type="text" class="w150"></td>
 				<th><b class="txt_c_red">*</b> 사업자등록번호</th>
-				<td><input type="text" class="w80"> - <input
-					type="text" class="w80"> - <input type="text" class="w80"></td>
+				<td><input type="text" class="w80"> - 
+					<input type="text" class="w80"> - 
+					<input type="text" class="w80"></td>
 			</tr>
 		</tbody>
 	</table>
@@ -108,63 +84,70 @@
 					<th><b class="txt_c_red">*</b> 구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th><b class="txt_c_red">*</b> 원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_blue ml_5">추가</a></td>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_blue ml_5">추가</a></td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 				<tr>
 					<th>구간</th>
 					<td>~ <input type="text" class="w150"></td>
 					<th>원가</th>
-					<td><input type="text" class="w150"> \ <a href=""
-						class="btn_sm_gray ml_5">삭제</a> <a href="" class="btn_sm_blue">추가</a>
+					<td><input type="text" class="w150"> \ 
+						<a href="" class="btn_sm_gray ml_5">삭제</a> 
+						<a href="" class="btn_sm_blue">추가</a>
 					</td>
 				</tr>
 			</tbody>
@@ -180,15 +163,12 @@
 
 	<!-- 하단 버튼 -->
 	<div class="btn_area mb_15">
-		<a href="#" class="btn lg btn_blue">확인</a> <a href="#"
-			class="btn lg btn_gray">취소</a>
+		<a href="#" class="btn lg btn_blue">확인</a> 
+		<a href="#" class="btn lg btn_gray">취소</a>
 	</div>
 	<!-- //하단 버튼 -->
 </div>
 <!-- //contents -->
-
-
-
 
 </@page.base>
 
