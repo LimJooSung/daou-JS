@@ -1,9 +1,12 @@
 <#import "/layout/page.ftl" as page>
+<#import "/layout/sales_sidebar.ftl" as sidebar>
 
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 실적자료실' />
 
 <@page.base pageTitle>
+
+<@sidebar />
 
 <!-- sidebar -->
 <!-- <div class="sidebar">

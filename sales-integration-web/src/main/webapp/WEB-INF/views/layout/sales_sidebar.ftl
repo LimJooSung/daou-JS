@@ -1,3 +1,4 @@
+<#macro sidebar>
 <!-- sidebar -->
 <div class="sidebar">
 	<ul class="nav">
@@ -11,3 +12,4 @@
 	</ul>
 </div> 
 <!-- //sidebar -->
+</#macro>
