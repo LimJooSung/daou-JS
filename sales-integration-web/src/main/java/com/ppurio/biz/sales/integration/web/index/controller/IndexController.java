@@ -33,5 +33,14 @@ public class IndexController {
     String root() {
         return "index";
     }
+    
+    /**
+     * 로고를 누르면 Home으로 이동
+     * @return 
+     */
+    @GetMapping("/goHome.do")
+    String goHome() {
+        return "/sub/index";
+    }
 
 }

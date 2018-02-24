@@ -34,7 +34,7 @@ public class LoginController {
      */
     @GetMapping("/loginProc.do")
     String loginProc(){
-        return "/sales/sales_performanceAdmin_month";
+        return "/sub/index";	// 임시로 sub/index 페이지로 이동
     }
 
 }

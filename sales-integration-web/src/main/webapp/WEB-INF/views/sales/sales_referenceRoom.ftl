@@ -5,7 +5,7 @@
 
 <@page.base pageTitle>
 
-<#include '/include/sales-left-menu.ftl'>
+
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
