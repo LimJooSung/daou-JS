@@ -11,8 +11,8 @@
 </@content.base>-->
 <div>
 	<!-- 일단은 의미없는 Home(페이지)로, 이미지 삽입 -->
-	<br><br><br>
-	&nbsp;&nbsp;&nbsp;<img src="images/home_sample.PNG" alt="" />
+	<br><br><br><br>
+	&nbsp;&nbsp;&nbsp;<img src="images/home_sample2.png" alt="" />
 </div>
 </@page.base>
 

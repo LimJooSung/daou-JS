@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>선수수익관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">매출/매입관리</a> > 
 			<a href="">선수수익관리</a>
 		</blockquote>

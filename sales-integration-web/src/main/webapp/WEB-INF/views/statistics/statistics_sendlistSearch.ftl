@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>발송내역 조회</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">통계</a> > 
 			<a href="">발송내역 조회</a>
 		</blockquote>
@@ -51,11 +51,11 @@
 			<tr>
 				<th><b class="txt_c_red">*</b> 조회기간</th>
 				<td><input type="text" class="w80">
-				<button class="calendar"></button>~ <input type="text" class="w80">
-				<button class="calendar"></button></td>
+					<button class="calendar"></button>~ <input type="text" class="w80">
+					<button class="calendar"></button></td>
 				<th><select class="p80">
 						<option>ID</option>
-				</select></th>
+					</select></th>
 				<td colspan="3"><input type="text" class="w100"></td>
 				<td rowspan="2"><a href="#" class="btn_sch_black r3">검색</a></td>
 			</tr>
@@ -63,11 +63,9 @@
 				<th>MSG ID</th>
 				<td><input type="text" class="w100"></td>
 				<th>발신번호</th>
-				<td><input type="text" class="w250"
-					placeholder="숫자만 입력(공백, -불가)"></td>
+				<td><input type="text" class="w250" placeholder="숫자만 입력(공백, -불가)"></td>
 				<th>수신번호</th>
-				<td><input type="text" class="w250"
-					placeholder="숫자만 입력(공백, -불가)"></td>
+				<td><input type="text" class="w250" placeholder="숫자만 입력(공백, -불가)"></td>
 			</tr>
 		</tbody>
 	</table>
@@ -97,21 +95,25 @@
 				<tr>
 					<th>ID</th>
 					<th>업체명</th>
-					<th>담당부서<br /> <select class="p80">
+					<th>담당부서<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
-					<th>담당자<br /> <select class="p80">
+					<th>담당자<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
-					<th>서비스<br /> <select class="p80">
+					<th>서비스<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
-					<th>품목<br /> <select class="p80">
+					<th>품목<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
 					<th>MSG ID</th>
 					<th>제목</th>
@@ -119,177 +121,40 @@
 					<th>수신번호</th>
 					<th>요청/예약시간</th>
 					<th>발송/완료시간</th>
-					<th>상태<br /> <select class="p80">
+					<th>상태<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
-					<th>실패코드<br /> <select class="p80">
+					<th>실패코드<br /> 
+						<select class="p80">
 							<option value="1">1</option>
-					</select>
+						</select>
 					</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>MSG2</td>
-					<td>윤수지</td>
-					<td>비즈뿌리오</td>
-					<td>SMS</td>
-					<td>actozg_A355174370853</td>
-					<td>회원가입안내</td>
-					<td>01012345678</td>
-					<td>01098765432</td>
-					<td>2017.12.28 16:00</td>
-					<td>2017.12.28 16:02</td>
-					<td>실패</td>
-					<td>1234</td>
-				</tr>
+				<!-- 여기서부터 반복 
+					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..10 as i>
+					<tr>
+						<td>daou</td>
+						<td>다우기술</td>
+						<td>MSG2</td>
+						<td>윤수지</td>
+						<td>비즈뿌리오</td>
+						<td>SMS</td>
+						<td>actozg_A355174370853</td>
+						<td>회원가입안내</td>
+						<td>01012345678</td>
+						<td>01098765432</td>
+						<td>2017.12.28 16:00</td>
+						<td>2017.12.28 16:02</td>
+						<td>실패</td>
+						<td>1234</td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 	</div>
@@ -299,17 +164,15 @@
 		<span>
 			<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button>
-		</span> <span class="page"> <span class="here">1</span>
-		<button type="button">2</button>
-			<button type="button">3</button>
-			<button type="button">4</button>
-			<button type="button">5</button>
-			<button type="button">6</button>
-			<button type="button">7</button>
-			<button type="button">8</button>
-			<button type="button">9</button>
-			<button type="button">10</button>
-		</span> <span>
+		</span> 
+		<span class="page"> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list>
+		</span> 
+		<span>
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
 			<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
 		</span>

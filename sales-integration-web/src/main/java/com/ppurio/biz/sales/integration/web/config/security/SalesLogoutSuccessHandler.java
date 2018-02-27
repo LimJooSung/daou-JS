@@ -26,11 +26,11 @@ public class SalesLogoutSuccessHandler implements LogoutSuccessHandler {
 
     @Override
     public void onLogoutSuccess(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    Authentication auth)
-                                        throws IOException, ServletException {
+                                HttpServletResponse response,
+                                Authentication auth) throws IOException, ServletException {
         /** @TODO 관리자 접근로그(로그아웃) 기록 */
         logs.info("==> onLogoutSuccess");
+        System.out.println("로그아웃됨");
     }
 
 }

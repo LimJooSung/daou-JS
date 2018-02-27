@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>매입처 관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">매입처 관리</a>
 		</blockquote>
@@ -87,69 +87,17 @@
 					<td><input type="text" class="w150"> \ 
 						<a href="" class="btn_sm_blue ml_5">추가</a></td>
 				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
-				<tr>
-					<th>구간</th>
-					<td>~ <input type="text" class="w150"></td>
-					<th>원가</th>
-					<td><input type="text" class="w150"> \ 
-						<a href="" class="btn_sm_gray ml_5">삭제</a> 
-						<a href="" class="btn_sm_blue">추가</a>
-					</td>
-				</tr>
+				<#list 1..7 as i>
+					<tr>
+						<th>구간</th>
+						<td>~ <input type="text" class="w150"></td>
+						<th>원가</th>
+						<td><input type="text" class="w150"> \ 
+							<a href="" class="btn_sm_gray ml_5">삭제</a> 
+							<a href="" class="btn_sm_blue">추가</a>
+						</td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 	</div>

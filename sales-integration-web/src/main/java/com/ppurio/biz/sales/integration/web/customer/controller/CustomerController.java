@@ -128,6 +128,15 @@ public class CustomerController {
     }
     
     /**
+     * 발신번호 한도
+     * @return
+     */
+    @GetMapping("/customerUserCallerbookLimit.do")
+    String customerUserCallerbookLimit(){
+        return "/customer/customer_userCallerbook_limit";
+    }
+    
+    /**
      * 발신번호 조회
      * @return
      */
@@ -189,4 +198,24 @@ public class CustomerController {
     String customerKakaoBizTempletApplyRegist(){
         return "/customer/customer_kakaoBiz_templetApply_regist";
     }
+    
+    /**
+     * 템플릿 그룹 관리
+     * @return
+     */
+    @GetMapping("/customerKakaoBizTempletgroupAdmin.do")
+    String customerKakaoBizTempletgroupAdmin(){
+        return "/customer/customer_kakaoBiz_templetgroupAdmin";
+    }
+    
+    /**
+     * 단가 변경 내역
+     * @return
+     */
+    @GetMapping("/customerMemberListUnitpriHistory.do")
+    String customerMemberListUnitpriHistory(){
+        return "/customer/customer_memberList_unitpriHistory";
+    }
+    
+    
 }

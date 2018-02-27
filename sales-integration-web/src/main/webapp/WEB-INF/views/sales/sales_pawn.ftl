@@ -5,7 +5,7 @@
 
 <@page.base pageTitle>
 
-
+<#include '/include/sales-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
 	<!-- title -->
@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>담보관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">영업 관리</a> > 
 			<a href="">담보 관리</a>
 		</blockquote>

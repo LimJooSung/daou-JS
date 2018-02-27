@@ -5,28 +5,23 @@
 
 <@page.base pageTitle>
 
-<!-- 레이어 팝업 css (이걸 sales.css에 옮기면 적용이 안됨) -->
 <style>
-	/* .setDiv 이게 뭔지 모르겠음 (필요없으면 지우기) */
-    .setDiv {
-        padding-top: 100px;
-        text-align: center;
-    }
-    .mask {
-        position:absolute;
-        left:0;
-        top:0;
-        z-index:9999;
-        background-color:#000;
-        display:none;
-    }
-    .window {
-        display: none;
-        background-color: #ffffff;
-        height: 550px;
-        width: 1100px;
-        z-index:99999;
-    }
+/* 레이어 팝업 css(여신관리) */
+	.mask {
+	    position:absolute;
+	    left:0;
+	    top:0;
+	    z-index:9999;
+	    background-color:#000;
+	    display:none;
+	}
+	.window {
+	    display: none;
+	    background-color: #ffffff;
+	    height: 550px;
+	    width: 1100px;
+	    z-index:99999;
+	}
 </style>
 
 <#include '/include/customer-left-menu.ftl'>
@@ -37,7 +32,7 @@
 		<em></em>
 		<h2>여신관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">여신관리</a>
 		</blockquote>
@@ -137,171 +132,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" /></td>
-				<td>1200</td>
-				<td>일반</td>
-				<td>비즈뿌리오</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>다우쇼핑</td>
-				<td>12-123-1234</td>
-				<td>2017.12.22</td>
-				<td>1,000,000w</td>
-				<td>-</td>
-				<td>변경</td>
-				<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
-			</tr>
+			<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+			-->
+			<#list 1..11 as i>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>1200</td>
+					<td>일반</td>
+					<td>비즈뿌리오</td>
+					<td>MSG2</td>
+					<td>윤수지</td>
+					<td>다우쇼핑</td>
+					<td>12-123-1234</td>
+					<td>2017.12.22</td>
+					<td>1,000,000w</td>
+					<td>-</td>
+					<td>변경</td>
+					<td><a href="" id="detailBtn" class="btn_sm_skyBlue">상세</a></td>
+				</tr>
+			</#list>
+			
 			<!-- 현재 적용 여신 -->
 			<tr class="total_r">
 				<td colspan="13">
@@ -358,46 +209,19 @@
 					<col style="width:20%">					
 				</colgroup>
 				<tbody>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
+					<!-- 여기서부터 반복 
+						 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+					-->
+					<#list 1..5 as i>
+						<tr>
+							<th>변경일</th>
+							<td>2017.12.22</td>
+							<th>적용기간</th>
+							<td>2017.12 ~ 2018.12</td>
+							<th>여신</th>
+							<td>1,500,000 \</td>						
+						</tr>
+					</#list>
 					<tr>
 						<th><span class="red">생성일</span></th>
 						<td>2017.12.22</td>
@@ -406,46 +230,16 @@
 						<th>여신</th>
 						<td>1,500,000 \</td>						
 					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
-					<tr>
-						<th>변경일</th>
-						<td>2017.12.22</td>
-						<th>적용기간</th>
-						<td>2017.12 ~ 2018.12</td>
-						<th>여신</th>
-						<td>1,500,000 \</td>						
-					</tr>
+					<#list 1..5 as i>
+						<tr>
+							<th>변경일</th>
+							<td>2017.12.22</td>
+							<th>적용기간</th>
+							<td>2017.12 ~ 2018.12</td>
+							<th>여신</th>
+							<td>1,500,000 \</td>						
+						</tr>
+					</#list>
 					<tr>
 						<th><span class="red">생성일</span></th>
 						<td>2017.12.22</td>
@@ -453,7 +247,7 @@
 						<td>2017.12 ~ 2018.12</td>
 						<th>여신</th>
 						<td>1,500,000 \</td>						
-					</tr>															
+					</tr>											
 				</tbody>
 			</table>
 			</div>

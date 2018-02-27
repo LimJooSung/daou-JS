@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>승인 전 회원 리스트</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">승인 전 회원 리스트</a>
 		</blockquote>
@@ -71,168 +71,20 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
-				<tr>
-					<td>320</td>
-					<td>2017.12.21</td>
-					<td>비즈뿌리오</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>070-1234-5678</td>
-					<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
-				</tr>
+				<!-- 여기서부터 반복 
+					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..18 as i>
+					<tr>
+						<td>320</td>
+						<td>2017.12.21</td>
+						<td>비즈뿌리오</td>
+						<td>다우기술</td>
+						<td>daou</td>
+						<td>070-1234-5678</td>
+						<td><a href="${rc.contextPath}/customerBeforeListDetail.do" class="btn_sm_skyBlue">상세</a></td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 		<!-- //회원리스트 table -->
@@ -243,17 +95,15 @@
 		<span>
 			<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button>
-		</span> <span class="page"> <span class="here">1</span>
-		<button type="button">2</button>
-			<button type="button">3</button>
-			<button type="button">4</button>
-			<button type="button">5</button>
-			<button type="button">6</button>
-			<button type="button">7</button>
-			<button type="button">8</button>
-			<button type="button">9</button>
-			<button type="button">10</button>
-		</span> <span>
+		</span> 
+		<span class="page"> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list>
+		</span> 
+		<span>
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
 			<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
 		</span>

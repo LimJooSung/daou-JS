@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>여신생성</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">여신관리</a>
 		</blockquote>

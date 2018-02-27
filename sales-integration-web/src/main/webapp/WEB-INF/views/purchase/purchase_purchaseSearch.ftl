@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>예상매입조회</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">매출/매입관리</a> > 
 			<a href="">매입관리</a>> 
 			<a href="">예상매입조회</a>
@@ -160,146 +160,25 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>
-			<tr>
-				<td>2018.09</td>
-				<td>SKT</td>
-				<td>MSG1</td>
-				<td>100</td>
-				<td>200</td>
-				<td>300</td>
-				<td>400</td>
-				<td>110</td>
-				<td>210</td>
-				<td>310</td>
-				<td>410</td>
-				<td>30,760</td>
-			</tr>				
+			<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+			-->
+			<#list 1..10 as i>
+				<tr>
+					<td>2018.09</td>
+					<td>SKT</td>
+					<td>MSG1</td>
+					<td>100</td>
+					<td>200</td>
+					<td>300</td>
+					<td>400</td>
+					<td>110</td>
+					<td>210</td>
+					<td>310</td>
+					<td>410</td>
+					<td>30,760</td>
+				</tr>
+			</#list>
 		</tbody>
 	</table>
 
@@ -310,7 +189,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>

@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>템플릿/이미지 관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">카카오톡 비즈메시지</a> > 
 			<a href="">템플릿/이미지 관리</a>

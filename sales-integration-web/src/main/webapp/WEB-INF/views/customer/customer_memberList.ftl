@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>회원 리스트</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">회원 리스트</a>
 		</blockquote>
@@ -153,6 +153,10 @@
 			</tr>
 		</thead>
 		<tbody>
+			<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				 이지만 출력되는 정보가 많이 달라서 일단은 그냥 두기로 함
+			-->
 			<tr>
 				<td>2017.09.12</td>
 				<td>ⓢdaoutest</td>
@@ -305,7 +309,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button>
 		</span> 
 		<span class="page"> 
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button>
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list>
 		</span> 
 		<span>
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>

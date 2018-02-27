@@ -5,6 +5,88 @@
 
 <@page.base pageTitle>
 
+<script>
+	/********* 팝업 레이어 스크립트 (단가 복사) **********/
+	/********* 하나의 페이지에서 여러개의 팝업 레이어를 띄우기 위해 추가 **********/
+	function wrapWindowByMask4(){
+	    // 화면의 높이와 너비를 변수로 만듦
+	    var maskHeight = $(document).height();
+	    var maskWidth = $(window).width();
+	
+	    // 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정
+	    $('.unitpriceCopy_mask').css({'width':maskWidth,'height':maskHeight});
+	
+	    // fade 애니메이션 :80%의 불투명 처리
+	    $('.unitpriceCopy_mask').fadeTo("slow",0.8);
+	
+	    // 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듦
+	    var left = ( $(window).scrollLeft() + ( $(window).width() - $('.unitpriceCopy_window').width()) / 2 );
+	    var top = ( $(window).scrollTop() + ( $(window).height() - $('.unitpriceCopy_window').height()) / 2 );
+	
+	    // css 스타일을 변경
+	    $('.unitpriceCopy_window').css({'left':left,'top':top, 'position':'absolute'});
+	
+	    // 레이어 팝업을 띄움
+	    $('.unitpriceCopy_window').show();
+	}
+	
+	$(document).ready(function(){
+	    // showMask를 클릭시 작동하며 검은 마스크 배경과 레이어 팝업을 띄움
+	    $('#unitpriceCopyBtn').click(function(e){
+	        // preventDefault는 href의 링크 기본 행동을 막는 기능
+	        e.preventDefault();
+	        wrapWindowByMask4();
+	    });
+	
+	    // 닫기(close)를 눌렀을 때 작동
+	    $('.unitpriceCopy_window .close').click(function (e) {
+	        e.preventDefault();
+	        $('.unitpriceCopy_mask, .unitpriceCopy_window').hide();
+	    });
+	
+	    // 뒤 검은 마스크를 클릭시에도 모두 제거하도록 처리
+	    $('.unitpriceCopy_mask').click(function () {
+	        $(this).hide();
+	        $('.unitpriceCopy_window').hide();
+	    });
+	});
+/*******************************************/
+</script>
+<!-- 레이어 팝업 css -->
+<!-- 일단 편의상 각 페이지 별로 css 설정 (sales.css 파일에 각각의 이름을 두고 관리 가능) -->
+<style>
+    .mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .window {
+        display: none;
+        background-color: #ffffff;
+        height: 470px;
+        width: 600px;
+        z-index:99999;
+    }
+    .unitpriceCopy_mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .unitpriceCopy_window {
+        display: none;
+        background-color: #ffffff;
+        height: 400px;
+        width: 450px;
+        z-index:99999;
+    }
+</style>
+
 <#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">    
@@ -13,7 +95,7 @@
    		<em></em>
    		<h2>회원정보</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">회원 정보</a>
 		</blockquote>
@@ -410,97 +492,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>							
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>							
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td><input type="text" class="p80" /></td>
-							<td></td>
-							<td></td>
-							<td><input type="text" class="p80" /></td>
-						</tr>																					
+						<!-- 여기서부터 반복 
+							 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+						-->
+						<#list 1..13 as i>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td><input type="text" class="p80" /></td>
+								<td></td>
+								<td></td>
+								<td><input type="text" class="p80" /></td>
+							</tr>
+						</#list>
 					</tbody>
 				</table>
 				<!-- //기타 사항 table -->
@@ -750,12 +753,12 @@
 				<p class="">
 					<label for="priceCopy" class="mr_15"><input type="checkbox" class="mr_3" id="priceCopy" name="priceCopy">타 계정 단가 복사(발송 정보에서 선택한 서비스 단가만 복사됩니다.)</label>
 					<label for="useID">ID : <input type="text" class="w80" value="ABC1234" id="useID" name="useID"></label>
-					<a href="" class="btn_sm_sch_black r3">검색</a>
+					<a href="" class="btn_sm_sch_black r3" id="unitpriceCopyBtn">검색</a>
 				</p>
 				<p>
 					<span class="red mr_5 f14">* 단가는 현재 적용 단가가 표시됩니다.</span> <label for="priModify" class="mr_15">단가 변경 여부 : <input type="text" class="w100" id="priModify" name="priModify" placeholder="변경/미변경"></label>
 					<label for="finalDate">최종 변경일 : <input type="text" class="w100" name="finalDate" id="finalDate"></label>
-					<a href="" class="btn_sm_skyBlue">변경내용</a>
+					<a href="${rc.contextPath}/customerMemberListUnitpriHistory.do" class="btn_sm_skyBlue">변경내용</a>
 				</p>
 			</div>
 		</div>
@@ -1092,7 +1095,7 @@
 					<option value="1">고객사 단가-발송 원가) X 수수료율 </option>
 					<option value="2">건당 고정 수수료</option>
 				</select>
-				<a href="#" class="ml_3 btn_sm_black r3">평균 수수료</a>
+				<a href="#" class="ml_3 btn_sm_black r3" id="detailBtn">평균 수수료</a>
 			</p>
 		</div>
 
@@ -1443,7 +1446,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
@@ -1454,7 +1461,120 @@
 	<!-- //tab_히스토리 -->
 </div>
 <!-- //contents -->
-	
+
+<!-- 레이어 팝업 -->
+<div class="mask"></div>
+<div class="window">
+	<!-- popup_평균 수수료 조회 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>평균 수수료 조회</h1>
+		</div>
+		<div class="contents">
+			<div class="scroll h300">
+				<table class="tb_list_b">
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>품목</th>
+							<th>평균 수수료</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 여기서부터 반복 
+							 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+						-->
+						<#list 1..2 as i>
+							<tr>
+								<td>SMS</td>
+								<td class="align_r">2 \</td>
+							</tr>
+							<tr>
+								<td>LMS</td>
+								<td class="align_r">SKT(1) / KT(1.5) / LGU(2) \</td>
+							</tr>
+							<tr>
+								<td>MMS</td>
+								<td class="align_r">SKT(1) / KT(1.5) / LGU(2) \</td>
+							</tr>						
+							<tr>
+								<td>알림톡</td>
+								<td class="align_r">0.5 \</td>
+							</tr>						
+							<tr>
+								<td>친구톡(T)</td>
+								<td class="align_r">2 \</td>
+							</tr>						
+							<tr>
+								<td>친구톡(I)</td>
+								<td class="align_r">1.5 \</td>
+							</tr>
+						</#list>
+					</tbody>
+				</table>				
+			</div>
+			<div class="bnt_area"><button class="btn md btn_blue close">확인</button></div>
+		</div>
+	</div>	
+	<!-- //popup_평균 수수료 조회 -->
+</div>
+
+<!-- 레이어 팝업 -->
+<div class="unitpriceCopy_mask"></div>
+<div class="unitpriceCopy_window">
+	<!-- popup_단가 복사 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>단가 복사</h1>
+		</div>
+		<div class="contents">
+			<!-- 조회 -->
+			<div class="box_grey box_search">
+				<div class="form_group">
+					<p class="align_c">			
+						<label for="useID" class="bul">ID
+							<input type="text" class="ml_3 w200" id="useID" name="useID">
+						</label>
+						<a href="" class="btn_sm_sch_black r3">검색</a>
+					</p>
+				</div>
+			</div>
+			<!-- //조회 -->
+			
+			<table class="tb_list_b mt_10">
+				<colgroup>
+					<col style="width:20%">
+					<col style="width:80%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>daoutest</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>daoutest</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>daoutest</td>
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+		<div class="btn_area"><button class="btn md btn_blue">확인</button><button class="btn md btn_gray ml_5 close">취소</button></div>
+	</div>
+	<!-- //popup_단가 복사 -->
+</div>
 </@page.base>
 
 

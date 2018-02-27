@@ -72,5 +72,32 @@ public class PurchaseController {
     String purchasePurchaseList(){
         return "/purchase/purchase_purchaseList";
     }
+    
+    /**
+     * 품목별 매출조회 결과
+     * @return
+     */
+    @GetMapping("/purchaseItemsearchResult.do")
+    String purchaseItemsearchResult(){
+        return "/purchase/purchase_itemsearchResult";
+    }
+    
+    /**
+     * 선불 고객사 매출 상세 내역
+     * @return
+     */
+    @GetMapping("/purchaseReferencePrepaymDetail.do")
+    String purchaseReferencePrepaymDetail(){
+        return "/purchase/purchase_reference_prepaymDetail";
+    }
+    
+    /**
+     * 후불 고객사 매출 상세 내역
+     * @return
+     */
+    @GetMapping("/purchaseReferencePostpayDetail.do")
+    String purchaseReferencePostpayDetail(){
+        return "/purchase/purchase_reference_postpayDetail";
+    }
 
 }

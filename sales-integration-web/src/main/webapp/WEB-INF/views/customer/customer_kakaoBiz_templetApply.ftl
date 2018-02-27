@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>템플릿/이미지 관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">카카오톡 비즈메시지</a> > 
 			<a href="">템플릿/이미지 관리</a>
@@ -240,7 +240,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
@@ -308,156 +312,21 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>gogs766</td>
-					<td>(주)수지닷컴</td>
-					<td>유핏</td>
-					<td>교재 프로모션1</td>
-					<td><a href="" class="a_be">http://sicon.com</a></td>
-					<td><a href="" class="a_be">http://images1</a></td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox"></td>
-				</tr>					
+				<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..15 as i>
+					<tr>
+						<td>gogs766</td>
+						<td>(주)수지닷컴</td>
+						<td>유핏</td>
+						<td>교재 프로모션1</td>
+						<td><a href="" class="a_be">http://sicon.com</a></td>
+						<td><a href="" class="a_be">http://images1</a></td>
+						<td>2017.12.26</td>
+						<td><input type="checkbox"></td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 		<!-- //친구톡 이미지 관리 table -->
@@ -470,7 +339,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>

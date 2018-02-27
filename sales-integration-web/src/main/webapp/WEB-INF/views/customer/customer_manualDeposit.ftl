@@ -5,6 +5,27 @@
 
 <@page.base pageTitle>
 
+<!-- 레이어 팝업 css -->
+<!-- 일단 편의상 각 페이지 별로 css 설정 (sales.css 파일에 각각의 이름을 두고 관리 가능) -->
+<style>
+	/* 발신프로필 등록 팝업 레이어 css */
+    .mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .window {
+        display: none;
+        background-color: #ffffff;
+        height: 330px;
+        width: 640px;
+        z-index:99999;
+    }
+</style>
+
 <#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
@@ -13,7 +34,7 @@
    		<em></em>
    		<h2>수동 입출금</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">수동입출금</a>
 		</blockquote>
@@ -67,66 +88,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>gogs766</td>
-				<td>비즈뿌리오</td>
-				<td>수지닷컴</td>
-				<td>MSG1</td>
-				<td>김현진</td>
-				<td>2,000 \</td>
-				<td>1,000 \</td>
-				<td>
-					<a href="" class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
-				</td>
-			</tr>
-			<tr>
-				<td>gogs766</td>
-				<td>비즈뿌리오</td>
-				<td>수지닷컴</td>
-				<td>MSG1</td>
-				<td>김현진</td>
-				<td>2,000 \</td>
-				<td>1,000 \</td>
-				<td>
-					<a href="" class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
-				</td>
-			</tr>
-			<tr>
-				<td>gogs766</td>
-				<td>비즈뿌리오</td>
-				<td>수지닷컴</td>
-				<td>MSG1</td>
-				<td>김현진</td>
-				<td>2,000 \</td>
-				<td>1,000 \</td>
-				<td>
-					<a class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
-				</td>
-			</tr>
-			<tr>
-				<td>gogs766</td>
-				<td>비즈뿌리오</td>
-				<td>수지닷컴</td>
-				<td>MSG1</td>
-				<td>김현진</td>
-				<td>2,000 \</td>
-				<td>1,000 \</td>
-				<td>
-					<a class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
-				</td>
-			</tr>
-			<tr>
-				<td>gogs766</td>
-				<td>비즈뿌리오</td>
-				<td>수지닷컴</td>
-				<td>MSG1</td>
-				<td>김현진</td>
-				<td>2,000 \</td>
-				<td>1,000 \</td>
-				<td>
-					<a class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
-				</td>
-			</tr>				
+			<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+			-->
+			<#list 1..5 as i>
+				<tr>
+					<td>gogs766</td>
+					<td>비즈뿌리오</td>
+					<td>수지닷컴</td>
+					<td>MSG1</td>
+					<td>김현진</td>
+					<td>2,000 \</td>
+					<td>1,000 \</td>
+					<td>
+						<a href="" class="btn_sm_blue mr_3">충전</a><a class="btn_sm_gray mr_3">차감</a>
+					</td>
+				</tr>
+			</#list>
 		</tbody>
 	</table>
       <!-- //입출금 정보 table -->	
@@ -200,13 +178,55 @@
 
       <!-- 하단 버튼 -->
        <div class="btn_area mb_15">
-       	<a href="#" class="btn lg btn_blue">확인</a>
+       	<a href="#" class="btn lg btn_blue" id="detailBtn">확인</a>
 		<a href="#" class="btn lg btn_gray">취소</a>
        </div>
        <!-- //하단 버튼 -->				
 </div>
 <!-- //contents -->
 
+<!-- 레이어 팝업 -->
+<div class="mask"></div>
+<div class="window">
+	<!-- popup_수동 입출금 확인 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>수동 입출금 확인</h1>
+		</div>
+		<div class="contents">
+			<table class="tb_list2_a">
+				<colgroup>
+					<col style="width:15%">
+					<col style="width:35%">
+					<col style="width:15%">
+					<col style="width:35%">					
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>ID</th>
+						<td>sicon</td>
+						<th>서비스</th>
+						<td>비즈뿌리오</td>						
+					</tr>
+					<tr>
+						<th>내역</th>
+						<td colspan="3">충전(가입축하금)</td>
+					</tr>
+					<tr>
+						<th>금액</th>
+						<td colspan="3">1,000 \</td>
+					</tr>
+					<tr>
+						<th>비고</th>
+						<td colspan="3">1,000 \</td>
+					</tr>															
+				</tbody>
+			</table>
+		</div>
+		<div class="btn_area"><button class="btn md btn_blue">확인 후 승인</button><button class="btn md btn_gray ml_5 close">수동 입출금 취소</button></div>	
+	</div>
+	<!-- popup_수동 입출금 확인 -->
+</div>
 </@page.base>
 
 

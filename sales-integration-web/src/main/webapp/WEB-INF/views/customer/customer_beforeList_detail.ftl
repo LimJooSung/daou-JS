@@ -13,7 +13,7 @@
 		<em></em>
 		<h2>승인 전 회원 리스트</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">승인 전 회원 리스트</a>
 		</blockquote>
@@ -163,7 +163,6 @@
 	</div>
 </div>
 <!-- //contents -->
-
 </@page.base>
 
 

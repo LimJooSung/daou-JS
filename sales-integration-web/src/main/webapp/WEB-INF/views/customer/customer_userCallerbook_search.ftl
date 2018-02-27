@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>발신번호 조회</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">발신번호 관리</a> > 
 			<a href="">발신번호 조회</a>
@@ -122,171 +122,26 @@
 			</tr>			   
 	   </thead>
 	   <tbody>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>
-	   		<tr>
-	   			<td><input type="checkbox" /></td>
-	   			<td>123</td>
-	   			<td>daou</td>
-	   			<td>비즈뿌리오</td>
-	   			<td>다우기술</td>
-	   			<td>MSG1</td>
-	   			<td>김현진</td>
-	   			<td>01012345678</td>
-	   			<td>웹</td>
-	   			<td>서류</td>
-	   			<td>2017.02.02</td>
-	   			<td>2017.02.02</td>
-	   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
-	   		</tr>			   		
+	   		<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+			-->
+			<#list 1..11 as i>
+				<tr>
+		   			<td><input type="checkbox" /></td>
+		   			<td>123</td>
+		   			<td>daou</td>
+		   			<td>비즈뿌리오</td>
+		   			<td>다우기술</td>
+		   			<td>MSG1</td>
+		   			<td>김현진</td>
+		   			<td>01012345678</td>
+		   			<td>웹</td>
+		   			<td>서류</td>
+		   			<td>2017.02.02</td>
+		   			<td>2017.02.02</td>
+		   			<td><a href="" class="btn_sm_skyBlue">보기</a></td>
+		   		</tr>
+			</#list>
 	   </tbody>
 	</table>
 	<!-- //table list -->		
@@ -298,7 +153,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>

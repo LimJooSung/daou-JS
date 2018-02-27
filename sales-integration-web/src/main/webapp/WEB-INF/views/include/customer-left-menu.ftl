@@ -9,6 +9,7 @@
 			<ul class="nav_second">
 				<li><a href="${rc.contextPath}/customerUserCallerbookSearch.do">발신번호 조회</a></li>
 				<li><a href="${rc.contextPath}/customerUserCallerbook.do">발신번호 승인</a></li>
+				<li><a href="${rc.contextPath}/customerUserCallerbookLimit.do">발신번호 한도</a></li>
 				<li><a href="${rc.contextPath}/customerUserCallerbookManager.do">발신번호 담당자</a></li>
 				<li><a href="${rc.contextPath}/customerUserCallerbookException.do">예외사업자 관리</a></li>
 				<li><a href="${rc.contextPath}/customerUserCallerbookFaxblock.do">FAX 차단 통계</a></li>

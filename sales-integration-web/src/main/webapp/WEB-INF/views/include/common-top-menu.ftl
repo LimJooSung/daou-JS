@@ -1,5 +1,5 @@
 <!-- left menubar 추출 스크립트 -->
-<script>
+<#--<script>
 	$(document).ready(function() {
 		// top 메뉴바 요소를 클릭했을 때
 		$(".nav_second").click(function() {
@@ -8,6 +8,7 @@
 			if (selectedVal == "영업관리") {
 				// 선택된 요소에 해당하는 sidebar를 html에 출력
 				var info = "";
+				//info += " <div class='sidebar'> ";
 				info += " <ul class='nav'> ";
 				info += " 	<li class='menu'><a href='#'>실적관리<i></i></a> ";
 				info += " 		<ul class='nav_second'> ";
@@ -16,8 +17,9 @@
 				info += " 		</ul></li> ";
 				info += " 	<li class='menu'><a href='${rc.contextPath}/salesPawn.do'>담보관리</a></li> ";
 				info += " </ul> ";
+				//info += " </div>";
 				$(".sidebar").html(info); //.html(): Clean HTML inside and append
-				return false;
+				//return false;
 			}
 		});
 		// top 메뉴바-서브메뉴 요소를 클릭했을 때
@@ -25,7 +27,23 @@
 			var selectedVal = $(this).text();
 			//alert(selectedVal);
 		});
+		
+		$("#logoutBtn").click(function() {
+			if (!confirm("로그아웃 하시겠습니까?")) {
+				return false;
+			}
+		});
 	});
+</script>-->
+
+<script>
+$(document).ready(function() {
+	$("#logoutBtn").click(function() {
+		if (!confirm("로그아웃 하시겠습니까?")) {
+			return false;
+		}
+	});
+});
 </script>
 
 <!-- menuTop -->
@@ -94,14 +112,22 @@
 					<li><a href="#">정산담당자 정보입력</a></li>
 				</ul></li>
 		</ul>
-		<div class="btn_box">
-			<!--<a href="#" class="pw mr_3">비밀번호</a>-->
-			<a href="#" class="logout">로그아웃</a>
-		</div>
+		<#if userSession?exists>
+			<div class="btn_box">
+				<!--<a href="#" class="pw mr_3">비밀번호</a>-->
+				<a href="${rc.contextPath}/logout.do" class="logout" id="logoutBtn">로그아웃</a>
+			</div>
+		<#else>
+			<div class="btn_box">
+				<!--<a href="#" class="pw mr_3">비밀번호</a>-->
+				<a href="${rc.contextPath}/login.do" class="logout">로그인</a>
+			</div>
+		</#if>
+		
 	</div>
 </div>
 <!-- //menuTop -->
 
 <!-- sales sidebar -->
-<div class="sidebar"></div>
+<!-- <div class="sidebar"></div> -->
 <!-- //sidebar -->

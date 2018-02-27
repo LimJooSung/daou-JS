@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+
+	<definition name="home.tiles" template="/WEB-INF/views/layout/default.ftl">
+		<put-attribute name="title" value="Demo Page" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/header.ftl" type="freemarker" />
+		<put-attribute name="content" value="/WEB-INF/views/tiles/home.ftl" type="freemarker" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/footer.ftl" type="freemarker" />
+	</definition>
+	<!-- */* : {1}/{2} 예를 들어 컨트롤러에서 member/register로 응답하면 WEB-INF/views/member/register.jsp 
+		가 main으로 include된다. -->
+	<definition name="*/*.tiles" extends="home.tiles">
+		<put-attribute name="title" value="{2}" />
+		<put-attribute name="main" value="/WEB-INF/views/{1}/{2}.ftl" type="freemarker" />
+	</definition>
+
+</tiles-definitions>

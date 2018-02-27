@@ -13,7 +13,7 @@
    		<em></em>
    		<h2>매입대사</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">매출/매입관리</a> > 
 			<a href="">매입관리</a>> 
 			<a href="">매입대사</a>
@@ -172,6 +172,10 @@
 				</tr>
 			</thead>
 			<tbody>
+				<!-- 여기서부터 반복 
+					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+					 이지만 출력되는 정보가 많이 달라서 일단은 그냥 두기로 함
+				-->
 				<tr>
 					<td rowspan="5">SKT</td>
 					<td>S</td>

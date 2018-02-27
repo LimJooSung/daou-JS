@@ -5,6 +5,61 @@
 
 <@page.base pageTitle>
 
+<!-- 레이어 팝업 css -->
+<!-- 일단 편의상 각 페이지 별로 css 설정 (sales.css 파일에 각각의 이름을 두고 관리 가능) -->
+<style>
+	/* 발신프로필 등록 팝업 레이어 css */
+    .mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .window {
+        display: none;
+        background-color: #ffffff;
+        height: 330px;
+        width: 640px;
+        z-index:99999;
+    }
+    
+    /* 발신프로필 삭제 팝업 레이어 css */
+    .sentProfile_delete_mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .sentProfile_delete_window {
+        display: none;
+        background-color: #ffffff;
+        height: 300px;
+        width: 350px;
+        z-index:99999;
+    }
+    
+    /* 연동 팝업 레이어 css */
+    .interlock_mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .interlock_window {
+        display: none;
+        background-color: #ffffff;
+        height: 370px;
+        width: 470px;
+        z-index:99999;
+    }
+</style>
+    
 <#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
@@ -13,7 +68,7 @@
    		<em></em>
    		<h2>발신프로필 관리</h2>
 		<blockquote class="txt_bul_bar">
-			<a href="">홈</a> > 
+			<a href="${rc.contextPath}/goHome.do">홈</a> > 
 			<a href="">고객 관리</a> > 
 			<a href="">카카오톡 비즈메시지</a> > 
 			<a href="">발신프로필 관리</a>
@@ -58,9 +113,9 @@
 	
 	<!-- button -->
 	<div class="align_r mb_15">
-		<a href="" class="btn_md_blue">등록</a>
-		<a href="" class="btn_md_skyBlue">그룹 설정</a>
-		<a href="" class="btn_md_gray">삭제</a>
+		<a href="" class="btn_md_blue" id="detailBtn">등록</a>
+		<a href="${rc.contextPath}/customerKakaoBizTempletgroupAdmin.do" class="btn_md_skyBlue">그룹 설정</a>
+		<a href="" class="btn_md_gray" id="sentProfileDeleteBtn">삭제</a>
 	</div>
 	<!-- //button -->
 
@@ -96,141 +151,20 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>
-				<tr>
-					<td>다우기술</td>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
-					<td>@다우기술</td>
-					<td>다우키움그룹</td>
-					<td>2017.12.26</td>
-					<td><input type="checkbox" /></td>
-				</tr>					
+				<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..15 as i>
+					<tr>
+						<td>다우기술</td>
+						<td>비즈뿌리오</td>
+						<td>daou</td>
+						<td>@다우기술</td>
+						<td>다우키움그룹</td>
+						<td>2017.12.26</td>
+						<td><input type="checkbox" /></td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 		<!-- //발신프로필 등록 list table  -->			
@@ -243,7 +177,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
@@ -278,7 +216,7 @@
 	
 	<!-- button -->
 	<div class="align_r mb_15">
-		<a href="" class="btn_md_skyBlue mr_3">연동</a>
+		<a href="" class="btn_md_skyBlue mr_3" id="interlockBtn">연동</a>
 	</div>
 	<!-- //button -->
 	
@@ -301,102 +239,17 @@
 					<th>메세징 ID</th>
 					<th>업체명</th>
 				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
-				<tr>
-					<td>daou</td>
-					<td>다우기술</td>
-					<td>daou</td>
-					<td>다우기술</td>
-				</tr>
+				<!-- 여기서부터 반복 
+				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..16 as i>
+					<tr>
+						<td>daou</td>
+						<td>다우기술</td>
+						<td>daou</td>
+						<td>다우기술</td>
+					</tr>
+				</#list>
 			</thead>
 		</table>
 	</div>
@@ -408,7 +261,11 @@
 			<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
 		</span>
 		<span class="page">
-			<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
+			<span class="here">1</span>
+			<!-- 버튼을 반복해서 출력 -->
+			<#list 2..10 as i>
+				<button type="button">${i}</button>
+			</#list> 
 		</span>
 		<span>       
 			<button title="다음 10페이지" class="next" type="button">&gt;</button>
@@ -421,7 +278,112 @@
 </div>
 <!-- //contents -->
 
+<!-- 레이어 팝업 -->
+<div class="mask"></div>
+<div class="window">
+	<!-- popup_발신프로필 등록 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>발신프로필 등록</h1>
+		</div>
+		<div class="contents">
+			<table class="tb_list2_a">
+				<colgroup>
+					<col style="width:20%">
+					<col style="width:80%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><b class="txt_c_red">*</b> 서비스</th>
+						<td>
+							<select id="serviceSelect" class="w200">
+								<option value="1">1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th><b class="txt_c_red">*</b> 메세징 ID</th>
+						<td><input type="text" class="w200" /></td>
+					</tr>
+					<tr>
+						<th><b class="txt_c_red">*</b> 발신프로필키</th>
+						<td><input type="text" class="w200" /></td>
+					</tr>
+					<tr>
+						<th>템플릿 그룹</th>
+						<td>
+							<select id="templetSelect" class="w200">
+								<option value="1">1</option>
+							</select>
+						</td>
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+		<div class="bnt_area"><button class="btn md btn_blue">등록</button><button class="btn md btn_gray ml_5 close">취소</button></div>
+	</div>
+	<!-- popup_발신프로필 등록 -->
+</div>
+
+<!-- 레이어 팝업 (발신프로필 삭제) -->
+<div class="sentProfile_delete_mask"></div>
+<div class="sentProfile_delete_window">
+	<!-- popup_발신프로필 삭제 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>발신프로필 삭제</h1>
+		</div>
+		<div class="contents">
+			<p class="align_c f16 mb_15">발신프로필을 삭제하시겠습니까?</p>
+			<ul class="txt_info ml_20">
+				<li>서비스 : 유핏</li>
+				<li>업체명 : 게티이미지</li>
+				<li>사용자 ID : gety</li>
+				<li>플러스친구 ID : @게티이미지</li>	
+			</ul>			
+		</div>
+		<div class="bnt_area"><button class="btn md btn_blue">확인</button><button class="btn md btn_gray ml_5 close">취소</button></div>	
+	</div>
+	<!-- popup_발신프로필 삭제 -->
+</div>
+
+<!-- 레이어 팝업 (연동) -->
+<div class="interlock_mask"></div>
+<div class="interlock_window">
+	<!-- popup_연동 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>연동</h1>
+		</div>
+		<div class="contents">
+			<ul class="box_b2">
+				<li class="red">메인 계정 : 공유될 계정</li>
+				<li class="red">서브 계정: 메인 계정의 발신프로필을 사용할 계정</li>
+			</ul>
+			<table class="tb_list2_a mt_15">
+				<colgroup>
+					<col style="width:20%">
+					<col style="width:80%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><b class="txt_c_red">*</b> 메인 ID</th>
+						<td><input type="text" class="w200"></td>
+					</tr>
+					<tr>
+						<th><b class="txt_c_red">*</b> 서브 ID</th>
+						<td><input type="text" class="w200"></td>
+					</tr>					
+				</tbody>
+			</table>		
+		</div>
+		<div class="bnt_area"><button class="btn md btn_blue">등록</button><button class="btn md btn_gray ml_5 close">취소</button></div>	
+	</div>
+	<!-- //popup_연동 -->
+</div>
 </@page.base>
+
+
 
 
 
