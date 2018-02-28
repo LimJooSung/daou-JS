@@ -17,6 +17,7 @@
 		<li class="menu"><a href="#">카카오톡 비즈메시지<i></i></a>
 			<ul class="nav_second">
 				<li><a href="${rc.contextPath}/customerKakaoBizSentProfile.do">발신프로필 관리</a></li>
+				<li><a href="${rc.contextPath}/customerKakaoBizTempletgroupAdmin.do">템플릿 그룹 관리</a></li>
 				<li><a href="${rc.contextPath}/customerKakaoBizTempletApply.do">템플릿/이미지 관리</a></li>
 			</ul></li>
 		<li class="menu"><a href="${rc.contextPath}/customerManualDeposit.do">수동 입출금</a></li>

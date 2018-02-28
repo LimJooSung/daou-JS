@@ -9,6 +9,9 @@ import com.ppurio.biz.sales.integration.commons.util.GoogleOTP;
 
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -39,7 +42,9 @@ public class IndexController {
      * @return 
      */
     @GetMapping("/goHome.do")
-    String goHome() {
+    String goHome(HttpServletRequest request) {
+    	HttpSession session = request.getSession(false);
+    	System.out.println("세션: " + session);	////// 나중에 지울거
         return "/sub/index";
     }
 

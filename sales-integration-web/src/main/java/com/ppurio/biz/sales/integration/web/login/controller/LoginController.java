@@ -68,10 +68,11 @@ public class LoginController {
     @GetMapping("/loginSuccess.do")
     String loginSuccess(Model model, HttpServletRequest request){
     	HttpSession session = request.getSession(false);
-    	if (session != null) {
-    		System.out.println("세션: " + session.getAttribute("empno") + ", " + session.getAttribute("passwd"));
-        	model.addAttribute("userSession", session);
-    	} 
+//    	System.out.println("세션: " + session);
+//    	if (session != null) {
+//    		System.out.println("세션: " + session.getAttribute("empno") + ", " + session.getAttribute("passwd"));
+//        	model.addAttribute("userSession", session);
+//    	} 
     	return "/sub/index";	// 임시로 sub/index 페이지로 이동
     }
 

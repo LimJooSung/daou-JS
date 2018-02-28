@@ -24,6 +24,9 @@
     <body>
 		<!-- 공통 영역인 top menu bar 추가 -->
 		<#include '${baseTopMenu}'>
+		<!-- 이 매크로를 사용하는 페이지에서 이 nested를 활용 
+			 (여기서는 그냥 nested 위치에 추가되는 정도의 개념)
+		-->
 		<#nested />
 	</body>
 </html>

@@ -1,9 +1,28 @@
 <#import "/layout/page.ftl" as page>
 
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 발신프로필 관리' />
+<#assign pageTitle='영업관리시스템 - 템플릿 그룹 관리' />
 
 <@page.base pageTitle>
+
+<style>
+	/* 템플릿 그룹 생성 팝업 레이어 css */
+    .mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .window {
+        display: none;
+        background-color: #ffffff;
+        height: 330px;
+        width: 550px;
+        z-index:99999;
+    }
+</style>
 
 <#include '/include/customer-left-menu.ftl'>
 <!-- contents -->
@@ -46,7 +65,7 @@
 	
 	<!-- button -->
 	<div class="align_r mb_15">
-		<a href="" class="btn md btn_blue">생성</a>
+		<a href="" class="btn md btn_blue" id="detailBtn">생성</a>
 		<a href="" class="btn md btn_gray">삭제</a>
 	</div>
 	<!-- //button -->
@@ -176,6 +195,43 @@
 </div>
 <!-- //contents -->
 
+<!-- 레이어 팝업 (템플릿 그룹 설정) -->
+<div class="mask"></div>
+<div class="window">
+	<!-- popup_템플릿 그룹 생성 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>템플릿 그룹 생성</h1>
+		</div>
+		<div class="contents">
+			<ul class="box_b2">
+				<li>* 생성 완료 시 그룹명 수정 불가합니다.</li>
+			</ul>
+			
+			<table class="tb_list2_a">
+				<colgroup>
+					<col style="width:20%">
+					<col style="width:80%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>템플릿 그룹명</th>
+						<td><input type="text" class="w200"></td>
+					</tr>
+					<tr>
+						<th>서비스</th>
+						<td>
+							<label for="bizppurio" class="mr_15"><input type="radio" id="bizppurio" name="bizppurio" checked=""> 비즈뿌리오</label>
+							<label for="ufit"><input type="radio" id="ufit" name="ufit"> 유핏</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="btn_area"><button class="btn md btn_blue">등록</button><button class="btn md btn_gray ml_5 close">취소</button></div>			
+	</div>
+	<!-- popup_템플릿 그룹 생성 -->
+</div>
 </@page.base>
 
 

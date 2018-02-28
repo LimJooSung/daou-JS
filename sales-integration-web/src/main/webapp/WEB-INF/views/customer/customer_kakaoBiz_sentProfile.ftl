@@ -5,6 +5,52 @@
 
 <@page.base pageTitle>
 
+<script>
+	/********* 팝업 레이어 스크립트 (템플릿 그룹설정) **********/
+	function wrapWindowByMask6(){
+	    // 화면의 높이와 너비를 변수로 만듦
+	    var maskHeight = $(document).height();
+	    var maskWidth = $(window).width();
+	
+	    // 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정
+	    $('.setGroup_mask').css({'width':maskWidth,'height':maskHeight});
+	
+	    // fade 애니메이션 :80%의 불투명 처리
+	    $('.setGroup_mask').fadeTo("slow",0.8);
+	
+	    // 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듦
+	    var left = ( $(window).scrollLeft() + ( $(window).width() - $('.setGroup_window').width()) / 2 );
+	    var top = ( $(window).scrollTop() + ( $(window).height() - $('.setGroup_window').height()) / 2 );
+	
+	    // css 스타일을 변경
+	    $('.setGroup_window').css({'left':left,'top':top, 'position':'absolute'});
+	
+	    // 레이어 팝업을 띄움
+	    $('.setGroup_window').show();
+	}
+	
+	$(document).ready(function(){
+	    // showMask를 클릭시 작동하며 검은 마스크 배경과 레이어 팝업을 띄움
+	    $('#setGroupBtn').click(function(e){
+	        // preventDefault는 href의 링크 기본 행동을 막는 기능
+	        e.preventDefault();
+	        wrapWindowByMask6();
+	    });
+	
+	    // 닫기(close)를 눌렀을 때 작동
+	    $('.setGroup_window .close').click(function (e) {
+	        e.preventDefault();
+	        $('.setGroup_mask, .setGroup_window').hide();
+	    });
+	
+	    // 뒤 검은 마스크를 클릭시에도 모두 제거하도록 처리
+	    $('.setGroup_mask').click(function () {
+	        $(this).hide();
+	        $('.setGroup_window').hide();
+	    });
+	});
+	/*******************************************/
+</script>
 <!-- 레이어 팝업 css -->
 <!-- 일단 편의상 각 페이지 별로 css 설정 (sales.css 파일에 각각의 이름을 두고 관리 가능) -->
 <style>
@@ -56,6 +102,23 @@
         background-color: #ffffff;
         height: 370px;
         width: 470px;
+        z-index:99999;
+    }
+    
+    /* 템플릿 그룹설정 팝업 레이어 css */
+    .setGroup_mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .setGroup_window {
+        display: none;
+        background-color: #ffffff;
+        height: 480px;
+        width: 500px;
         z-index:99999;
     }
 </style>
@@ -114,7 +177,7 @@
 	<!-- button -->
 	<div class="align_r mb_15">
 		<a href="" class="btn_md_blue" id="detailBtn">등록</a>
-		<a href="${rc.contextPath}/customerKakaoBizTempletgroupAdmin.do" class="btn_md_skyBlue">그룹 설정</a>
+		<a href="" class="btn_md_skyBlue" id="setGroupBtn">그룹 설정</a>
 		<a href="" class="btn_md_gray" id="sentProfileDeleteBtn">삭제</a>
 	</div>
 	<!-- //button -->
@@ -381,10 +444,44 @@
 	</div>
 	<!-- //popup_연동 -->
 </div>
+
+<!-- 레이어 팝업 (템플릿 그룹 설정) -->
+<div class="setGroup_mask"></div>
+<div class="setGroup_window">
+	<!-- popup_템플릿 그룹 지정 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>템플릿 그룹 설정</h1>
+		</div>
+		<div class="contents">
+			<!-- 조회 -->
+			<div class="box_grey box_search">
+				<div class="form_group">
+					<p class="align_c">
+						<label class="bul ml_5">템플릿 그룹
+							<input type="text" class="w200" placeholder="검색 조건 입력">
+						</label>
+						<a href="" class="btn_sm_sch_black r3">검색</a>
+					</p>
+				</div>
+			</div>
+			<!-- //조회 -->
+		
+			<div class="scroll h200 box_b3">
+				<ul class="checklist">
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+					<li>시스포유<input type="checkbox" class="f_r checkbox"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bnt_area"><button class="btn md btn_blue">확인</button><button class="btn md btn_gray ml_5 close">취소</button></div>
+	</div>
+	<!-- popup_템플릿 그룹 지정 -->
+</div>
 </@page.base>
-
-
-
-
-
-

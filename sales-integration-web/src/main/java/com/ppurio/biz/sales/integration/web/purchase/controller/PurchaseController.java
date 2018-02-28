@@ -5,6 +5,9 @@
  */
 package com.ppurio.biz.sales.integration.web.purchase.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -24,8 +27,14 @@ public class PurchaseController {
      * @return
      */
     @GetMapping("/purchaseReference.do")
-    String purchaseReference(){
-        return "/purchase/purchase_reference";
+    String purchaseReference(HttpServletRequest request){
+    	HttpSession session = request.getSession(false);
+    	if (session != null) {
+    		return "/purchase/purchase_reference";
+    	} else {
+    		return "/login/form";
+    	}
+        
     }
     
     /**

@@ -4,6 +4,7 @@
 		// top 메뉴바 요소를 클릭했을 때
 		$(".nav_second").click(function() {
 			var selectedVal = $(this).text();
+			//document.getElementById('sidebar').style.display = "block"; <!--보이기
 			//e.preventDefault();
 			if (selectedVal == "영업관리") {
 				// 선택된 요소에 해당하는 sidebar를 html에 출력
@@ -37,13 +38,13 @@
 </script>-->
 
 <script>
-$(document).ready(function() {
-	$("#logoutBtn").click(function() {
-		if (!confirm("로그아웃 하시겠습니까?")) {
-			return false;
-		}
+	$(document).ready(function() {
+		$("#logoutBtn").click(function() {
+			if (!confirm("로그아웃 하시겠습니까?")) {
+				return false;
+			}
+		});
 	});
-});
 </script>
 
 <!-- menuTop -->
@@ -112,7 +113,7 @@ $(document).ready(function() {
 					<li><a href="#">정산담당자 정보입력</a></li>
 				</ul></li>
 		</ul>
-		<#if userSession?exists>
+		<#if Session?exists>
 			<div class="btn_box">
 				<!--<a href="#" class="pw mr_3">비밀번호</a>-->
 				<a href="${rc.contextPath}/logout.do" class="logout" id="logoutBtn">로그아웃</a>
@@ -129,5 +130,5 @@ $(document).ready(function() {
 <!-- //menuTop -->
 
 <!-- sales sidebar -->
-<!-- <div class="sidebar"></div> -->
+<#--<div class="sidebar" id="sidebar" style="display:none"></div>-->
 <!-- //sidebar -->

@@ -153,150 +153,33 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- 여기서부터 반복 
-				 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
-				 이지만 출력되는 정보가 많이 달라서 일단은 그냥 두기로 함
+			<!-- CustomerController로부터 저장된 값을 ArrayList로 받아와 해당 정보를 출력
+				 현재는 DB를 거치지 않고, Controller에서 임시로 값을 저장하여 ftl에서 출력하도록 함
+				 model["(controller 내 model에 지정한 이름)"] 을 이용해 출력
 			-->
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓢdaoutest</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdaou</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td>무</td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdodo</td>
-				<td>비즈뿌리오</td>
-				<td>도도</td>
-				<td>재판매(에이전트)_고객사</td>
-				<td>후불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>growin</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdodo</td>
-				<td>비즈뿌리오</td>
-				<td>도도</td>
-				<td>재판매(에이전트)_고객사</td>
-				<td>후불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdaou</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td>무</td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓢdaoutest</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdaou</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td>무</td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdodo</td>
-				<td>비즈뿌리오</td>
-				<td>도도</td>
-				<td>재판매(에이전트)_고객사</td>
-				<td>후불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>growin</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdodo</td>
-				<td>비즈뿌리오</td>
-				<td>도도</td>
-				<td>재판매(에이전트)_고객사</td>
-				<td>후불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td><a href="" class="a_be blue">유</a></td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
-			<tr>
-				<td>2017.09.12</td>
-				<td>ⓜdaou</td>
-				<td>비즈뿌리오</td>
-				<td>다우기술</td>
-				<td>직판(일반)</td>
-				<td>선불</td>
-				<td>발송 가능</td>
-				<td>MSG2</td>
-				<td>윤수지</td>
-				<td>-</td>
-				<td>무</td>
-				<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
-			</tr>
+			<#list model["customerMemberList"] as customerMember>
+			  	<tr>
+					<td>${customerMember.approvedDate}</td>
+					<td>${customerMember.memId}</td>
+					<td>${customerMember.serviceCategory}</td>
+					<td>${customerMember.companyName}</td>
+					<td>${customerMember.memType}</td>
+					<td>${customerMember.payType}</td>
+					<td>${customerMember.shippingStat}</td>
+					<td>${customerMember.deptInCharge}</td>
+					<td>${customerMember.personInCharge}</td>
+					<td>${customerMember.adminAccount}</td>
+					<!-- freemarker 조건문에서 값을 비교할 때, == 를 사용하지 않고 = 를 사용
+						 그리고 if문 안에서 ${customerMember.memId}가 아닌 customerMember.memId 식으로 사용
+					-->
+					<#if customerMember.shippingQuantity = '유'>
+						<td><a href="" class="a_be blue">${customerMember.shippingQuantity}</a></td>
+					<#elseif customerMember.shippingQuantity = '무'>
+						<td><a href="">${customerMember.shippingQuantity}</a></td>
+					</#if>
+					<td><a href="${rc.contextPath}/customerMemberInfo.do" class="btn sm btn_skyBlue">수정</a></td>
+				</tr>
+		    </#list>
 		</tbody>
 	</table>
 	<!-- 검색 결과 table -->

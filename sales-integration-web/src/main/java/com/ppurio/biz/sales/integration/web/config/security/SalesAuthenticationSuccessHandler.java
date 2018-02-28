@@ -176,9 +176,9 @@ public class SalesAuthenticationSuccessHandler implements AuthenticationSuccessH
 //        response.sendRedirect(request.getRequestURI());
         System.out.println("url: " + request.getRequestURI());
         System.out.println(request.getParameter("empno") + " " + request.getParameter("passwd"));
-        HttpSession session = request.getSession();
-        session.setAttribute("empno", request.getParameter("empno"));
-        session.setAttribute("passwd", request.getParameter("passwd"));
+//        HttpSession session = request.getSession();
+//        session.setAttribute("empno", request.getParameter("empno"));
+//        session.setAttribute("passwd", request.getParameter("passwd"));
  
         //set our response to OK status
         //response.setStatus(HttpServletResponse.SC_OK);

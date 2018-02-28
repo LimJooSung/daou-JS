@@ -59,6 +59,7 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .frameOptions().disable()
                 .and()	// .and()는 xml 표현식에서 닫는 표현식의 역할     
             .csrf()
+            	// /webjars/ 등 이후의 모든 api들이 csrf 토큰검사 없이 사용가능하도록 허용(?)
                 .ignoringAntMatchers("/webjars/**", "/css/**", "/js/**", "/images/**")
                 .and()
             .authorizeRequests()

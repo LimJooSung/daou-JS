@@ -5,10 +5,16 @@
  */
 package com.ppurio.biz.sales.integration.web.customer.controller;
 
+import java.util.ArrayList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.ppurio.biz.sales.integration.web.customer.vo.CustomerMember;
 
 /**
  *
@@ -24,7 +30,62 @@ public class CustomerController {
      * @return
      */
     @GetMapping("/customerMemberList.do")
-    String customerMemberList(){
+    String customerMemberList(@ModelAttribute("model") ModelMap model){	// Model model로 할 시에는 에러 발생.. why?
+    	// 현재 DB에 저장된 값을 이용하는게 아니므로 ArrayList에
+    	// 임시로 값을 저장한 후, 이를 이용하여 freemarker template에서 출력해본다.
+    	ArrayList<CustomerMember> customerMemberList = new ArrayList<CustomerMember>();
+    	
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓢdaoutest", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "growin", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓢdaoutest", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "growin", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓢdaoutest", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "growin", "유"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdodo", "비즈뿌리오", "도도", "재판매(에이전트)", 
+    					"후불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	customerMemberList.add(
+    			new CustomerMember("2017.09.12", "ⓜdaou", "비즈뿌리오", "다우기술", "직판(일반)", 
+    					"선불", "발송 가능", "MSG2", "윤수지", "-", "무"));
+    	
+//    	for (int i=0; i<customerMemberList.size(); i++) {
+//    		System.out.println(customerMemberList.get(i));
+//    	}
+    	
+    	model.addAttribute("customerMemberList", customerMemberList);	// model에 값을 넣어 view로 전달
         return "/customer/customer_memberList";
     }
     

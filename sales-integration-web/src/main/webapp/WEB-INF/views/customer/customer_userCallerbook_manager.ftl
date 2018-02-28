@@ -74,7 +74,7 @@
 			
 	<!-- button -->
 	<div class="align_r mb_15">
-		<a href="" class="btn md btn_blue" id="detailBtn">승인</a>
+		<a href="" class="btn md btn_blue">승인</a>
 		<a href="" class="btn md btn_gray" id="detailBtn">반려</a>
 	</div>
 	<!-- //button -->

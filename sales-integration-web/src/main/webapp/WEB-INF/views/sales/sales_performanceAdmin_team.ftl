@@ -5,6 +5,172 @@
 
 <@page.base pageTitle>
 
+<!-- 매출/GP 추이 매크로(freemarker 문법을 사용해보는 취지) --> 
+<#macro salesGPTrend>
+	<!-- @그래프자리 -->
+	<div>
+		<img src="images/@graph2_1.gif" alt="그래프2">
+	</div>
+	<!-- //@그래프자리 -->
+
+	<table class="tb_list_b">
+		<colgroup>
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+			<col style="width: 7.6%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>1월</th>
+				<th>2월</th>
+				<th>3월</th>
+				<th>4월</th>
+				<th>5월</th>
+				<th>6월</th>
+				<th>7월</th>
+				<th>8월</th>
+				<th>9월</th>
+				<th>10월</th>
+				<th>11월</th>
+				<th>12월</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>목표</td>
+				<td>32,887,120</td>
+				<td>38,451,100</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>실적</td>
+				<td>32,887,120</td>
+				<td>38,451,100</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</#macro>
+
+<!-- 매출/GP Top10 매크로 -->
+<#macro salesGPTop>
+	<thead>
+		<tr>
+			<th>No.</th>
+			<th>업체명</th>
+			<th>사업자번호</th>
+			<th>매출</th>
+		</tr>
+	</thead>
+	<tbody>
+		<#list 1..5 as i>
+			<tr>
+				<td>${i}</td>
+				<td>다우기술</td>
+				<td>xxx-xx-xxxx</td>
+				<td>8,000,000 \</td>
+			</tr>
+		</#list>
+	</tbody>
+</#macro>
+
+<!-- 품목별 매출/GP 매크로 -->
+<#macro salesGPbyItem>
+	<table class="tb_list_b">
+		<colgroup>
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+			<col style="width: 8.3%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>SMS</th>
+				<th>LMS</th>
+				<th>MMS</th>
+				<th>알림톡</th>
+				<th>친구톡(T)</th>
+				<th>친구톡(I)</th>
+				<th>WAP</th>
+				<th>VMMS</th>
+				<th>VMS</th>
+				<th>MO</th>
+				<th>FAX</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>금액</td>
+				<td>500,000\</td>
+				<td>100,000\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+				<td>\</td>
+			</tr>
+			<tr>
+				<td>비중(%)</td>
+				<td>10%</td>
+				<td>2%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+				<td>%</td>
+			</tr>
+		</tbody>
+	</table>
+</#macro>
+<!-------------------- 매크로 선언 끝 --------------------->
+
+
 <#include '/include/sales-left-menu.ftl'>
 <!-- contents -->
 <div class="container_r">
@@ -124,156 +290,16 @@
 	<!-- 매출 -->
 	<div class="mb_15">
 		<h5>&lt 매출 &gt</h5>
-		<!-- @그래프자리 -->
-		<div>
-			<img src="images/@graph2_1.gif" alt="그래프2">
-		</div>
-		<!-- //@그래프자리 -->
-
-		<table class="tb_list_b">
-			<colgroup>
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th>구분</th>
-					<th>1월</th>
-					<th>2월</th>
-					<th>3월</th>
-					<th>4월</th>
-					<th>5월</th>
-					<th>6월</th>
-					<th>7월</th>
-					<th>8월</th>
-					<th>9월</th>
-					<th>10월</th>
-					<th>11월</th>
-					<th>12월</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>목표</td>
-					<td>32,887,120</td>
-					<td>38,451,100</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>실적</td>
-					<td>32,887,120</td>
-					<td>38,451,100</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
+		<!-- 매출 추이 (매크로 이용) -->
+		<@salesGPTrend />
 	</div>
 	<!-- //매출 -->
 
 	<!-- GP -->
 	<div class="mb_15">
 		<h5>&lt GP &gt</h5>
-		<!-- @그래프자리 -->
-		<div>
-			<img src="images/@graph2_1.gif" alt="그래프2">
-		</div>
-		<!-- //@그래프자리 -->
-
-		<table class="tb_list_b">
-			<colgroup>
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-				<col style="width: 7.6%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th>구분</th>
-					<th>1월</th>
-					<th>2월</th>
-					<th>3월</th>
-					<th>4월</th>
-					<th>5월</th>
-					<th>6월</th>
-					<th>7월</th>
-					<th>8월</th>
-					<th>9월</th>
-					<th>10월</th>
-					<th>11월</th>
-					<th>12월</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>목표</td>
-					<td>32,887,120</td>
-					<td>38,451,100</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>실적</td>
-					<td>32,887,120</td>
-					<td>38,451,100</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
+		<!-- GP 추이 (매크로 이용) -->
+		<@salesGPTrend />
 	</div>
 
 	<!-- //GP -->
@@ -314,46 +340,8 @@
 						<col style="width: 30%">
 						<col style="width: 30%">
 					</colgroup>
-					<thead>
-						<tr>
-							<th>No.</th>
-							<th>업체명</th>
-							<th>사업자번호</th>
-							<th>매출</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-					</tbody>
+					<!-- salesGPTop 매크로 이용 -->
+					<@salesGPTop />
 				</table>
 			</div>
 		</div>
@@ -371,46 +359,8 @@
 						<col style="width: 30%">
 						<col style="width: 30%">
 					</colgroup>
-					<thead>
-						<tr>
-							<th>No.</th>
-							<th>업체명</th>
-							<th>사업자번호</th>
-							<th>매출</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>다우기술</td>
-							<td>xxx-xx-xxxx</td>
-							<td>8,000,000 \</td>
-						</tr>
-					</tbody>
+					<!-- salesGPTop 매크로 이용 -->
+					<@salesGPTop />
 				</table>
 			</div>
 		</div>
@@ -473,135 +423,15 @@
 	<h5 class="mb_10">매출</h5>
 
 	<!-- 매출 table -->
-	<table class="tb_list_b">
-		<colgroup>
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>구분</th>
-				<th>SMS</th>
-				<th>LMS</th>
-				<th>MMS</th>
-				<th>알림톡</th>
-				<th>친구톡(T)</th>
-				<th>친구톡(I)</th>
-				<th>WAP</th>
-				<th>VMMS</th>
-				<th>VMS</th>
-				<th>MO</th>
-				<th>FAX</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>금액</td>
-				<td>500,000\</td>
-				<td>100,000\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-			</tr>
-			<tr>
-				<td>비중(%)</td>
-				<td>10%</td>
-				<td>2%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-			</tr>
-		</tbody>
-	</table>
+	<!-- 품목별 매출/GP 매크로 -->
+	<@salesGPbyItem />
 	<!-- //매출 table -->
 
 	<h5 class="mb_10">GP</h5>
 
 	<!-- GP table -->
-	<table class="tb_list_b">
-		<colgroup>
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-			<col style="width: 8.3%">
-		</colgroup>
-		<thead>
-			<tr>
-				<th>구분</th>
-				<th>SMS</th>
-				<th>LMS</th>
-				<th>MMS</th>
-				<th>알림톡</th>
-				<th>친구톡(T)</th>
-				<th>친구톡(I)</th>
-				<th>WAP</th>
-				<th>VMMS</th>
-				<th>VMS</th>
-				<th>MO</th>
-				<th>FAX</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>금액</td>
-				<td>500,000\</td>
-				<td>100,000\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-				<td>\</td>
-			</tr>
-			<tr>
-				<td>비중(%)</td>
-				<td>10%</td>
-				<td>2%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-				<td>%</td>
-			</tr>
-		</tbody>
-	</table>
+	<!-- 품목별 매출/GP 매크로 -->
+	<@salesGPbyItem />
 	<!-- //GP table -->
 
 	<div class="title">
@@ -674,198 +504,30 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>8</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>9</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
-				<tr>
-					<td>10</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-					<td>다우기술</td>
-					<td>500,000</td>
-					<td>8,000,000</td>
-					<td>8,000,000</td>
-				</tr>
+				<!-- 여기서부터 반복 
+					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
+				-->
+				<#list 1..10 as i>
+					<tr>
+						<td>${i}</td>
+						<td>다우기술</td>
+						<td>500,000</td>
+						<td>8,000,000</td>
+						<td>8,000,000</td>
+						<td>다우기술</td>
+						<td>500,000</td>
+						<td>8,000,000</td>
+						<td>8,000,000</td>
+						<td>다우기술</td>
+						<td>500,000</td>
+						<td>8,000,000</td>
+						<td>8,000,000</td>
+						<td>다우기술</td>
+						<td>500,000</td>
+						<td>8,000,000</td>
+						<td>8,000,000</td>
+					</tr>
+				</#list>
 			</tbody>
 		</table>
 	</div>

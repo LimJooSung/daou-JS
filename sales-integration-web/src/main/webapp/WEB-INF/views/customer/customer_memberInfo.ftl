@@ -50,7 +50,53 @@
 	        $('.unitpriceCopy_window').hide();
 	    });
 	});
-/*******************************************/
+	/*******************************************/
+	
+	/********* 팝업 레이어 스크립트 (정보 수정) **********/
+	/********* 하나의 페이지에서 여러개의 팝업 레이어를 띄우기 위해 추가 **********/
+	function wrapWindowByMask5(){
+	    // 화면의 높이와 너비를 변수로 만듦
+	    var maskHeight = $(document).height();
+	    var maskWidth = $(window).width();
+	
+	    // 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정
+	    $('.infoChange_mask').css({'width':maskWidth,'height':maskHeight});
+	
+	    // fade 애니메이션 :80%의 불투명 처리
+	    $('.infoChange_mask').fadeTo("slow",0.8);
+	
+	    // 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듦
+	    var left = ( $(window).scrollLeft() + ( $(window).width() - $('.infoChange_window').width()) / 2 );
+	    var top = ( $(window).scrollTop() + ( $(window).height() - $('.infoChange_window').height()) / 2 );
+	
+	    // css 스타일을 변경
+	    $('.infoChange_window').css({'left':left,'top':top, 'position':'absolute'});
+	
+	    // 레이어 팝업을 띄움
+	    $('.infoChange_window').show();
+	}
+	
+	$(document).ready(function(){
+	    // showMask를 클릭시 작동하며 검은 마스크 배경과 레이어 팝업을 띄움
+	    $('#infoChangeBtn').click(function(e){
+	        // preventDefault는 href의 링크 기본 행동을 막는 기능
+	        e.preventDefault();
+	        wrapWindowByMask5();
+	    });
+	
+	    // 닫기(close)를 눌렀을 때 작동
+	    $('.infoChange_window .close').click(function (e) {
+	        e.preventDefault();
+	        $('.infoChange_mask, .infoChange_window').hide();
+	    });
+	
+	    // 뒤 검은 마스크를 클릭시에도 모두 제거하도록 처리
+	    $('.infoChange_mask').click(function () {
+	        $(this).hide();
+	        $('.infoChange_window').hide();
+	    });
+	});
+	/*******************************************/
 </script>
 <!-- 레이어 팝업 css -->
 <!-- 일단 편의상 각 페이지 별로 css 설정 (sales.css 파일에 각각의 이름을 두고 관리 가능) -->
@@ -83,6 +129,21 @@
         background-color: #ffffff;
         height: 400px;
         width: 450px;
+        z-index:99999;
+    }
+    .infoChange_mask {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:9999;
+        background-color:#000;
+        display:none;
+    }
+    .infoChange_window {
+        display: none;
+        background-color: #ffffff;
+        height: 300px;
+        width: 380px;
         z-index:99999;
     }
 </style>
@@ -130,7 +191,7 @@
 	
 	<!-- button -->
 	<div class="box">
-		<span class="align_l"><a href="#" class="btn md btn_skyBlue">수정/저장</a> <a href="#" class="btn md btn_gray">취소</a> <a href="#" class="btn md btn_gray">사용해지</a></span>
+		<span class="align_l"><a href="#" class="btn md btn_skyBlue" id="infoChangeBtn">수정/저장</a> <a href="#" class="btn md btn_gray">취소</a> <a href="#" class="btn md btn_gray">사용해지</a></span>
 		<span class="f_r"><a href="#" class="btn md btn_blue">신규 거래처 등록</a></span>
 	</div>
 	<!-- //button -->
@@ -1574,6 +1635,29 @@
 		<div class="btn_area"><button class="btn md btn_blue">확인</button><button class="btn md btn_gray ml_5 close">취소</button></div>
 	</div>
 	<!-- //popup_단가 복사 -->
+</div>
+
+<!-- 레이어 팝업 -->
+<div class="infoChange_mask"></div>
+<div class="infoChange_window">
+	<!-- popup_정보 수정 -->
+	<div class="popup_wrap ">
+		<div class="title_box">
+			<h1>정보 수정</h1>
+		</div>
+		<div class="contents">
+			<!-- message -->
+			<p class="align_c mb_15">법인명, 대표자명, 사업소재시 변경 시 결재가 필요합니다. <br />전자결재 새 창을 엽니다.</p>
+			<!-- //message -->
+			<div class="box align_c">
+				<ul>
+					<li>* 전자결재 승인 완료 후 수정사항이 적용됩니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bnt_area"><button class="btn md btn_blue close">확인</button></div>		
+	</div>
+	<!-- //popup_정보 수정 -->
 </div>
 </@page.base>
 

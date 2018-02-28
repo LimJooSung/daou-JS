@@ -150,7 +150,7 @@
 		   		<!-- 여기서부터 반복 
 					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
 				-->
-		   		<#list 1..7 as i>
+		   		<#list 1..15 as i>
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>1200</td> 
@@ -159,29 +159,22 @@
 						<td>다우기술</td>
 						<td>MSG1</td> 
 						<td>김현진</td>
-						<td>개별등록</td>  						 
+						<#if i%2 == 0>
+							<td><a href="" class="a_be blue">일괄등록</a></td>
+						<#else>
+							<td>개별등록</td>
+						</#if>
 						<td>070-1234-5678</td>
 						<td>웹</td> 
 						<td>2017.12.22</td>
-						<td><a href="#" class="btn_sm_skyBlue">보기</a></td>  	
-						<td>승인 요청</td>					 					  						 
+						<td><a href="#" class="btn_sm_skyBlue">보기</a></td>
+						<#if i%2 == 0>
+							<td>반려</td>
+						<#else>
+							<td>승인 요청</td>
+						</#if>  	
 					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>1200</td> 
-						<td>daou</td>
-						<td>비즈뿌리오</td>
-						<td>다우기술</td>
-						<td>MSG1</td> 
-						<td>김현진</td>
-						<td><a href="" class="a_be blue">일괄등록</a></td>  						 
-						<td>070-1234-5678</td>
-						<td>웹</td> 
-						<td>2017.12.22</td>
-						<td><a href="#" class="btn_sm_skyBlue">보기</a></td>  	
-						<td>반려</td>					 					  						 
-					</tr>
-				</#list>																																																									
+				</#list>
 			</tbody>
 		</table>
 		<!-- //table list -->
@@ -312,7 +305,7 @@
 			<!-- 여기서부터 반복 
 					 (원래는 Controller를 거쳐 list를 받아와 해당 정보를 출력하는 것)
 				-->
-		   		<#list 1..5 as i>
+		   		<#list 1..10 as i>
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>1200</td> 
@@ -326,22 +319,11 @@
 						<td>서류</td> 
 						<td>2017.12.22</td>
 						<td>2017.12.22</td>
-						<td><a href="#" class="btn_sm_line_blue">보기</a></td>  						 					  						 
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>1200</td> 
-						<td>daou</td>
-						<td>비즈뿌리오</td>
-						<td>다우기술</td>
-						<td>MSG1</td> 
-						<td>김현진</td>
-						<td>070-1234-5678</td>  						 
-						<td>웹</td>
-						<td>서류</td> 
-						<td>2017.12.22</td>
-						<td>2017.12.22</td>
-						<td>-</td>  						 					  						 
+						<#if i%2 == 0>
+							<td>-</td>
+						<#else>
+							<td><a href="#" class="btn_sm_line_blue">보기</a></td>
+						</#if>
 					</tr>
 				</#list>
 		</tbody>
