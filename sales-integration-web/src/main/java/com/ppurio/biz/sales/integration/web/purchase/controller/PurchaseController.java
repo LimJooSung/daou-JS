@@ -27,14 +27,8 @@ public class PurchaseController {
      * @return
      */
     @GetMapping("/purchaseReference.do")
-    String purchaseReference(HttpServletRequest request){
-    	HttpSession session = request.getSession(false);
-    	if (session != null) {
-    		return "/purchase/purchase_reference";
-    	} else {
-    		return "/login/form";
-    	}
-        
+    String purchaseReference(){
+    	return "/purchase/purchase_reference";
     }
     
     /**

@@ -73,7 +73,7 @@ public class LoginController {
 //    		System.out.println("세션: " + session.getAttribute("empno") + ", " + session.getAttribute("passwd"));
 //        	model.addAttribute("userSession", session);
 //    	} 
-    	return "/sub/index";	// 임시로 sub/index 페이지로 이동
+    	return "/sub/index";	// sub/index 페이지로 이동
     }
 
 }

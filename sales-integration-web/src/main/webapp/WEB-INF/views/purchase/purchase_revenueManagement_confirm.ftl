@@ -27,7 +27,7 @@
 		<p><span class="txt_bul_dot f15">업체명(사업자번호) : 다우기술(220-81-02810)</span></p>
 	</div>
 	<div class="align_r mb_15">
-		<a href="" class="btn md btn_gray">이전으로</a>
+		<a href="${rc.contextPath}/purchaseRevenueManagement.do" class="btn md btn_gray">이전으로</a>
 	</div>
 	<!-- //조회기간/기준일/업체명 -->
 	

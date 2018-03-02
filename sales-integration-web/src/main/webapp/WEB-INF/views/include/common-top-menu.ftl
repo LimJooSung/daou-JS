@@ -113,17 +113,17 @@
 					<li><a href="#">정산담당자 정보입력</a></li>
 				</ul></li>
 		</ul>
-		<#if Session?exists>
-			<div class="btn_box">
+		<#--<#if Session?exists>-->
+			<#--<div class="btn_box">-->
 				<!--<a href="#" class="pw mr_3">비밀번호</a>-->
-				<a href="${rc.contextPath}/logout.do" class="logout" id="logoutBtn">로그아웃</a>
-			</div>
-		<#else>
+				<#--<a href="${rc.contextPath}/logout.do" class="logout" id="logoutBtn">로그아웃</a>-->
+			<#--</div>-->
+		<#--<#else>-->
 			<div class="btn_box">
 				<!--<a href="#" class="pw mr_3">비밀번호</a>-->
 				<a href="${rc.contextPath}/login.do" class="logout">로그인</a>
 			</div>
-		</#if>
+		<#--</#if>-->
 		
 	</div>
 </div>

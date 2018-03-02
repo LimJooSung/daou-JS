@@ -1,5 +1,5 @@
 <#macro base>
-	<!-- webjars/ 에서 -> 경로에 대한 공부 더 필요(아직 안됨) -->
+	<!-- webjars/ 에서 -> (아직 안됨) -->
     <#--<script type="text/javascript" src="/webjars/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>-->
     

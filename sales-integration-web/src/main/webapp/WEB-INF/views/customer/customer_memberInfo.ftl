@@ -191,7 +191,7 @@
 	
 	<!-- button -->
 	<div class="box">
-		<span class="align_l"><a href="#" class="btn md btn_skyBlue" id="infoChangeBtn">수정/저장</a> <a href="#" class="btn md btn_gray">취소</a> <a href="#" class="btn md btn_gray">사용해지</a></span>
+		<span class="align_l"><a href="#" class="btn md btn_skyBlue" id="infoChangeBtn">수정/저장</a> <a href="${rc.contextPath}/customerMemberList.do" class="btn md btn_gray">취소</a> <a href="#" class="btn md btn_gray">사용해지</a></span>
 		<span class="f_r"><a href="#" class="btn md btn_blue">신규 거래처 등록</a></span>
 	</div>
 	<!-- //button -->
